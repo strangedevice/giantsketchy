@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CADFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0" Name="effector_strut">
+  <layers>
+    <layer name="Strut" color="127,255,0">
+      <ModificationCount>0</ModificationCount>
+      <objects>
+        <pline id="1" Closed="true">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>46.510559486959,-8.5312113417798,0</p>
+            <p b="0.4457874498000472">45.990634892252,-11.509233330842,0</p>
+            <p b="0.30471135656014514">47.139244202938,-12.9714725246529,0</p>
+            <p b="0.445787449800047">59.683313053101,-5.7008943248618,0</p>
+            <p>58.985459626212,-3.9773957309866,0</p>
+            <p b="0.37282469327269718">56.142964441138,-2.9482418676846,0</p>
+            <p b="-0.28473285765295137">54.614933470416,-3.534495039178,0</p>
+            <p b="0.37282469327269263">47.778800381256,-7.496737338914,0</p>
+          </pts>
+        </pline>
+        <points id="2">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>60,0</p>
+            <p>42,10.3923048454133</p>
+            <p>42,-10.3923048454133</p>
+          </pts>
+        </points>
+        <pline id="4" Closed="true">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>41.356474509485,5.555498992609,0</p>
+            <p b="0.4457874498000472">39.037394111282,7.4947778942088,0</p>
+            <p b="0.30471135656014514">37.19675316769,7.231172649037,0</p>
+            <p b="0.445787449800047">37.221224163829,-7.2675987419208,0</p>
+            <p>39.062744442956,-7.5249892430544,0</p>
+            <p b="0.37282469327269718">41.375265425515,-5.5778931342962,0</p>
+            <p b="-0.28473285765295137">41.631570771314,-3.9614529101349,0</p>
+            <p b="0.37282469327269263">41.618234828373,3.939933158597,0</p>
+          </pts>
+        </pline>
+        <circle id="7" c="48,0,0" d="9">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <pline id="8" Closed="true">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>56.132966003556,2.9757123491708,0</p>
+            <p b="0.4457874498000472">58.971970996466,4.0144554366332,0</p>
+            <p b="0.30471135656014514">59.664002629372,5.7402998756158,0</p>
+            <p b="0.445787449800047">47.09546278307,12.9684930667826,0</p>
+            <p>45.951795930832,11.502384974041,0</p>
+            <p b="0.37282469327269718">46.481770133347,8.5261350019808,0</p>
+            <p b="-0.28473285765295137">47.75349575827,7.4959479493129,0</p>
+            <p b="0.37282469327269263">54.602964790371,3.556804180317,0</p>
+          </pts>
+        </pline>
+        <rect id="15" Closed="true" p="20.5,-8,0" w="12" h="12">
+          <ModificationCount>9</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>20.5,-8,0</p>
+            <p>32.5,-8,0</p>
+            <p>32.5,4,0</p>
+            <p>20.5,4,0</p>
+          </pts>
+        </rect>
+        <rect id="3" Closed="true" p="12.5,4,0" w="20" h="4">
+          <ModificationCount>3</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>12.5,4,0</p>
+            <p>32.5,4,0</p>
+            <p>32.5,8,0</p>
+            <p>12.5,8,0</p>
+          </pts>
+        </rect>
+        <points id="5">
+          <ModificationCount>3</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>26,0</p>
+          </pts>
+        </points>
+        <points id="6">
+          <ModificationCount>0</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>16.5,-1</p>
+          </pts>
+        </points>
+        <pline id="14" Closed="true">
+          <ModificationCount>1</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p b="0.26794919243112264">12.5,-3.5,0</p>
+            <p b="0.13165249758739586">13.25,-4.79903810567666,0</p>
+            <p>14,-5,0</p>
+            <p b="-0.28968986330278135">32.1886116991581,-5,0</p>
+            <p b="0.15223150075584685">34.4473814564212,-6.42857142857143,0</p>
+            <p b="0.57735026918962584">40.5,-12.9903810567666,0</p>
+            <p b="0.577350269189626">63,0,0</p>
+            <p b="0.15223150075584693">40.5,12.9903810567666,0</p>
+            <p b="-0.28968986330278146">34.4473814564212,6.42857142857143,0</p>
+            <p>32.1886116991581,5,0</p>
+            <p>12.5,5,0</p>
+          </pts>
+        </pline>
+      </objects>
+    </layer>
+  </layers>
+  <MachiningOptions>
+    <OutFile>servo_arm.nc</OutFile>
+    <Stock>
+      <Material>Aluminium</Material>
+      <PMin>0,0,-3</PMin>
+      <PMax>195,50</PMax>
+      <Color>255,165,0</Color>
+    </Stock>
+    <ToolProfile>Unspecified</ToolProfile>
+  </MachiningOptions>
+  <parts>
+    <part Name="Part1">
+      <machineops>
+        <drill>
+          <Style>alu_spiral_drill_2.5</Style>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Standard</OptimisationMode>
+          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
+          <ToolDiameter state="Default">2.5</ToolDiameter>
+          <ToolNumber state="Value">11</ToolNumber>
+          <ToolProfile state="Default">EndMill</ToolProfile>
+          <PlungeFeedrate state="Default">10</PlungeFeedrate>
+          <CutFeedrate state="Default">300</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.95</MaxCrossoverDistance>
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>cross_pin_hole</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <DepthRelativeTo state="Default">Absolute</DepthRelativeTo>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">0.5</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">1000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">Undefined</VelocityMode>
+          <primitive>
+            <prim>5</prim>
+          </primitive>
+          <TargetDepth state="Value">-3.1</TargetDepth>
+          <DepthIncrement state="Default">0.1</DepthIncrement>
+          <HoleDiameter state="Value">3.3</HoleDiameter>
+          <DrillLeadOut state="Default">False</DrillLeadOut>
+          <LeadOutLength state="Default">0</LeadOutLength>
+          <DrillingMethod state="Default">SpiralMill_CW</DrillingMethod>
+          <PeckDistance state="Default">0</PeckDistance>
+          <RetractHeight state="Default">0</RetractHeight>
+          <Dwell state="Default">0</Dwell>
+          <CustomScript state="Default" />
+        </drill>
+        <drill>
+          <Style>alu_spiral_drill_2.5</Style>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Standard</OptimisationMode>
+          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
+          <ToolDiameter state="Default">2.5</ToolDiameter>
+          <ToolNumber state="Value">11</ToolNumber>
+          <ToolProfile state="Default">EndMill</ToolProfile>
+          <PlungeFeedrate state="Default">10</PlungeFeedrate>
+          <CutFeedrate state="Default">300</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.95</MaxCrossoverDistance>
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>holes_3mm</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <DepthRelativeTo state="Default">Absolute</DepthRelativeTo>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">0.5</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">1000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">Undefined</VelocityMode>
+          <primitive>
+            <prim>6</prim>
+            <prim>2</prim>
+          </primitive>
+          <TargetDepth state="Default">0</TargetDepth>
+          <DepthIncrement state="Default">0.1</DepthIncrement>
+          <HoleDiameter state="Default">0</HoleDiameter>
+          <DrillLeadOut state="Default">False</DrillLeadOut>
+          <LeadOutLength state="Default">0</LeadOutLength>
+          <DrillingMethod state="Default">SpiralMill_CW</DrillingMethod>
+          <PeckDistance state="Default">0</PeckDistance>
+          <RetractHeight state="Default">0</RetractHeight>
+          <Dwell state="Default">0</Dwell>
+          <CustomScript state="Default" />
+        </drill>
+      </machineops>
+      <Stock>
+        <PMin>0,0</PMin>
+        <PMax>0,0</PMax>
+        <Color>255,165,0</Color>
+      </Stock>
+      <ToolProfile>Unspecified</ToolProfile>
+      <Nesting>
+        <BasePoint>0,0</BasePoint>
+      </Nesting>
+    </part>
+  </parts>
+  <ShowStock>false</ShowStock>
+  <ActiveLayer>Strut</ActiveLayer>
+  <ActivePart>Part1</ActivePart>
+</CADFile>

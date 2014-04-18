@@ -1,0 +1,6 @@
+
+# gcode files
+*.nc
+
+# backup files
+*.cb.b[1-9]*

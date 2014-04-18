@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CADFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="0.9.8.0" Name="plan">
+  <layers>
+    <layer name="Default" color="127,255,0">
+      <ModificationCount>0</ModificationCount>
+      <objects>
+        <circle id="1" d="65">
+          <ModificationCount>4</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <pline id="2" Closed="true">
+          <ModificationCount>169</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-55,-52,0</p>
+            <p>55,-52,0</p>
+            <p>55,-44,0</p>
+            <p>-55,-44,0</p>
+          </pts>
+        </pline>
+        <pline id="9" Closed="true">
+          <ModificationCount>13</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>4.5,-55,0</p>
+            <p>13.5,-55,0</p>
+            <p>13.5,-40,0</p>
+            <p>4.5,-40,0</p>
+            <p>4.5,-33,0</p>
+            <p>-4.5,-33,0</p>
+            <p>-4.5,-40,0</p>
+            <p>-13.5,-40,0</p>
+            <p>-13.5,-55,0</p>
+            <p>-4.5,-55,0</p>
+            <p>-4.5,-63,0</p>
+            <p>4.5,-63,0</p>
+          </pts>
+        </pline>
+        <rect id="13" Closed="true" p="-1.5,-63,0" w="3" h="50.5">
+          <ModificationCount>17</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-1.5,-63,0</p>
+            <p>1.5,-63,0</p>
+            <p>1.5,-12.5,0</p>
+            <p>-1.5,-12.5,0</p>
+          </pts>
+        </rect>
+        <circle id="14" d="25">
+          <ModificationCount>1</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <rect id="24" Closed="true" p="-8.5,-27.65,0" w="17" h="3.3">
+          <ModificationCount>135</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-8.5,-27.65,0</p>
+            <p>8.5,-27.65,0</p>
+            <p>8.5,-24.35,0</p>
+            <p>-8.5,-24.35,0</p>
+          </pts>
+        </rect>
+        <circle id="25" d="41">
+          <ModificationCount>0</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <rect id="28" Closed="true" p="-8.5,-27.65,0" w="17" h="3.3">
+          <ModificationCount>1</ModificationCount>
+          <mat m="-0.5 0.866025403784439 0 0 -0.866025403784439 -0.5 0 0 0 0 1 0 0 0 0 1" />
+          <pts>
+            <p>-8.5,-27.65,0</p>
+            <p>8.5,-27.65,0</p>
+            <p>8.5,-24.35,0</p>
+            <p>-8.5,-24.35,0</p>
+          </pts>
+        </rect>
+        <rect id="29" Closed="true" p="-8.5,-27.65,0" w="17" h="3.3">
+          <ModificationCount>1</ModificationCount>
+          <mat m="-0.5 -0.866025403784438 0 0 0.866025403784438 -0.5 0 0 0 0 1 0 0 0 0 1" />
+          <pts>
+            <p>-8.5,-27.65,0</p>
+            <p>8.5,-27.65,0</p>
+            <p>8.5,-24.35,0</p>
+            <p>-8.5,-24.35,0</p>
+          </pts>
+        </rect>
+        <pline id="30" Closed="true">
+          <ModificationCount>2</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>72.5333209967908,-21.6313972081441,0</p>
+            <p>17.5333209967908,73.6313972081441,0</p>
+            <p>10.6051177665153,69.6313972081441,0</p>
+            <p>65.6051177665153,-25.6313972081441,0</p>
+          </pts>
+        </pline>
+        <pline id="31" Closed="true">
+          <ModificationCount>2</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>45.3813972081441,31.39711431703,0</p>
+            <p>40.8813972081441,39.1913429510899,0</p>
+            <p>27.8910161513776,31.6913429510899,0</p>
+            <p>32.3910161513775,23.89711431703,0</p>
+            <p>26.3288383248865,20.39711431703,0</p>
+            <p>30.8288383248865,12.60288568297,0</p>
+            <p>36.8910161513775,16.10288568297,0</p>
+            <p>41.3910161513775,8.30865704891007,0</p>
+            <p>54.3813972081441,15.8086570489101,0</p>
+            <p>49.8813972081441,23.60288568297,0</p>
+            <p>56.8096004384196,27.60288568297,0</p>
+            <p>52.3096004384196,35.39711431703,0</p>
+          </pts>
+        </pline>
+        <rect id="32" Closed="true" p="-1.5,-63,0" w="3" h="50.5">
+          <ModificationCount>1</ModificationCount>
+          <mat m="-0.5 0.866025403784439 0 0 -0.866025403784439 -0.5 0 0 0 0 1 0 0 0 0 1" />
+          <pts>
+            <p>-1.5,-63,0</p>
+            <p>1.5,-63,0</p>
+            <p>1.5,-12.5,0</p>
+            <p>-1.5,-12.5,0</p>
+          </pts>
+        </rect>
+        <pline id="33" Closed="true">
+          <ModificationCount>2</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-17.5333209967908,73.6313972081441,0</p>
+            <p>-72.5333209967908,-21.6313972081441,0</p>
+            <p>-65.6051177665153,-25.6313972081441,0</p>
+            <p>-10.6051177665153,69.6313972081441,0</p>
+          </pts>
+        </pline>
+        <pline id="34" Closed="true">
+          <ModificationCount>2</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-49.8813972081441,23.6028856829701,0</p>
+            <p>-54.3813972081441,15.8086570489101,0</p>
+            <p>-41.3910161513775,8.3086570489101,0</p>
+            <p>-36.8910161513775,16.10288568297,0</p>
+            <p>-30.8288383248865,12.60288568297,0</p>
+            <p>-26.3288383248865,20.39711431703,0</p>
+            <p>-32.3910161513775,23.89711431703,0</p>
+            <p>-27.8910161513775,31.6913429510899,0</p>
+            <p>-40.8813972081441,39.1913429510899,0</p>
+            <p>-45.3813972081441,31.39711431703,0</p>
+            <p>-52.3096004384196,35.39711431703,0</p>
+            <p>-56.8096004384196,27.6028856829701,0</p>
+          </pts>
+        </pline>
+        <rect id="35" Closed="true" p="-1.5,-63,0" w="3" h="50.5">
+          <ModificationCount>1</ModificationCount>
+          <mat m="-0.5 -0.866025403784438 0 0 0.866025403784438 -0.5 0 0 0 0 1 0 0 0 0 1" />
+          <pts>
+            <p>-1.5,-63,0</p>
+            <p>1.5,-63,0</p>
+            <p>1.5,-12.5,0</p>
+            <p>-1.5,-12.5,0</p>
+          </pts>
+        </rect>
+        <points id="42">
+          <ModificationCount>6</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>22.9537574502967,-13.2523582806986</p>
+            <p>2.05989685753138E-07,26.5047162046125</p>
+            <p>-22.9537576562864,-13.252357923914</p>
+          </pts>
+        </points>
+        <points id="44">
+          <ModificationCount>4</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>14.2959781989083,-8.25378700960959</p>
+            <p>1.28293769385834E-07,16.5075737970079</p>
+            <p>-14.295978327202,-8.25378678739826</p>
+          </pts>
+        </points>
+      </objects>
+    </layer>
+  </layers>
+  <MachiningOptions>
+    <Stock>
+      <PMin>0,0</PMin>
+      <PMax>0,0</PMax>
+      <Color>255,165,0</Color>
+    </Stock>
+    <ToolProfile>Unspecified</ToolProfile>
+  </MachiningOptions>
+  <parts />
+  <ActiveLayer>Default</ActiveLayer>
+</CADFile>
