@@ -5,7 +5,7 @@
       <ModificationCount>15</ModificationCount>
       <objects>
         <pline id="435" Closed="true">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.095162470818399458">22.95,0,0</p>
@@ -152,7 +152,7 @@
           </pts>
         </pline>
         <circle id="436" c="-2.5,0,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
@@ -161,48 +161,48 @@
       <ModificationCount>11</ModificationCount>
       <objects>
         <circle id="437" c="28,0,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="438" c="19.7989898732233,19.7989898732233,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="439" c="1.71444889535133E-15,28,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="440" c="-19.7989898732233,19.7989898732233,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="441" c="-28,3.42889779070266E-15,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="442" c="-19.7989898732233,-19.7989898732233,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="443" c="-5.14334668605398E-15,-28,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="444" c="19.7989898732233,-19.7989898732233,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="445" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
     <layer name="camo" color="255,0,0" visible="false">
-      <ModificationCount>7</ModificationCount>
+      <ModificationCount>9</ModificationCount>
       <objects>
         <pline id="302" Closed="true">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.099741433351752423">17.45,0,0</p>
@@ -314,7 +314,7 @@
           </pts>
         </pline>
         <circle id="303" c="-2.5,0,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
@@ -323,40 +323,40 @@
       <ModificationCount>5</ModificationCount>
       <objects>
         <circle id="304" c="22.5,0,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="305" c="11.25,19.4855715851499,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="306" c="-11.25,19.4855715851499,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="307" c="-22.5,2.75536429610035E-15,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="308" c="-11.25,-19.4855715851499,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="309" c="11.25,-19.4855715851499,0" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="310" d="10">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
     <layer name="base" color="127,255,0" visible="false">
-      <ModificationCount>15</ModificationCount>
+      <ModificationCount>17</ModificationCount>
       <objects>
         <points id="451">
-          <ModificationCount>21</ModificationCount>
+          <ModificationCount>23</ModificationCount>
           <Tag>mounting holes M5</Tag>
           <mat m="Identity" />
           <pts>
@@ -367,7 +367,7 @@
           </pts>
         </points>
         <pline id="452" Closed="true">
-          <ModificationCount>16</ModificationCount>
+          <ModificationCount>18</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -382,28 +382,28 @@
           </pts>
         </pline>
         <circle id="453" d="50">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="454" d="64">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
     <layer name="top" color="127,255,0" visible="false">
-      <ModificationCount>21</ModificationCount>
+      <ModificationCount>23</ModificationCount>
       <objects>
         <circle id="400" d="28">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="401" d="64">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <pline id="36" Closed="true">
-          <ModificationCount>10</ModificationCount>
+          <ModificationCount>12</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -418,7 +418,7 @@
           </pts>
         </pline>
         <points id="37">
-          <ModificationCount>10</ModificationCount>
+          <ModificationCount>12</ModificationCount>
           <Tag>mounting holes M5</Tag>
           <mat m="Identity" />
           <pts>
@@ -429,7 +429,7 @@
           </pts>
         </points>
         <pline id="47" Closed="true">
-          <ModificationCount>11</ModificationCount>
+          <ModificationCount>13</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.10860390575427634">4.99966317424157,-28.0580357142857,0</p>
@@ -466,7 +466,7 @@
           </pts>
         </pline>
         <pline id="7" Closed="true">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -481,7 +481,7 @@
           </pts>
         </pline>
         <pline id="17" Closed="true">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -496,7 +496,7 @@
           </pts>
         </pline>
         <pline id="22" Closed="true">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-37,-30,0</p>
@@ -512,14 +512,14 @@
       </objects>
     </layer>
     <layer name="cup" color="127,255,0" visible="false">
-      <ModificationCount>15</ModificationCount>
+      <ModificationCount>21</ModificationCount>
       <objects>
         <circle id="159" d="49.9">
-          <ModificationCount>17</ModificationCount>
+          <ModificationCount>19</ModificationCount>
           <mat m="Identity" />
         </circle>
         <points id="161">
-          <ModificationCount>16</ModificationCount>
+          <ModificationCount>18</ModificationCount>
           <mat m="0.70710676908493 0.70710676908493 0 0 -0.70710676908493 0.70710676908493 0 0 0 0 1 0 0 0 0 1" />
           <pts>
             <p>15.85,0</p>
@@ -529,7 +529,7 @@
           </pts>
         </points>
         <pline id="13" Closed="true">
-          <ModificationCount>11</ModificationCount>
+          <ModificationCount>13</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.15342145874433524">-15.5549105071583,16.9423953180858,0</p>
@@ -556,7 +556,7 @@
           </pts>
         </pline>
         <pline id="11" Closed="true">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>9.6198922899961,13.9577059597136,0</p>
@@ -568,7 +568,7 @@
           </pts>
         </pline>
         <pline id="14" Closed="true">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-12.7953922899961,13.9577059597136,0</p>
@@ -580,7 +580,7 @@
           </pts>
         </pline>
         <pline id="16" Closed="true">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-12.7953922899961,-8.45757862027861,0</p>
@@ -592,7 +592,7 @@
           </pts>
         </pline>
         <pline id="18" Closed="true">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>9.6198922899961,-8.45757862027861,0</p>
@@ -604,16 +604,16 @@
           </pts>
         </pline>
         <circle id="20" d="51">
-          <ModificationCount>9</ModificationCount>
+          <ModificationCount>11</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
     <layer name="cam" color="127,255,0" visible="false">
-      <ModificationCount>15</ModificationCount>
+      <ModificationCount>17</ModificationCount>
       <objects>
         <pline id="3" Closed="true">
-          <ModificationCount>12</ModificationCount>
+          <ModificationCount>14</ModificationCount>
           <mat m="1 0 0 0 0 1 0 0 0 0 1 0 2.5 0 0 1" />
           <pts>
             <p b="0.095162470818399458">22.95,0,0</p>
@@ -760,7 +760,7 @@
           </pts>
         </pline>
         <pline id="4" Closed="true">
-          <ModificationCount>12</ModificationCount>
+          <ModificationCount>14</ModificationCount>
           <mat m="1 0 0 0 0 1 0 0 0 0 1 0 2.5 0 0 1" />
           <pts>
             <p b="0.099741433351752423">17.45,0,0</p>
@@ -872,15 +872,15 @@
           </pts>
         </pline>
         <circle id="5" c="-2.5,0,0" d="22">
-          <ModificationCount>13</ModificationCount>
+          <ModificationCount>15</ModificationCount>
           <mat m="1 0 0 0 0 1 0 0 0 0 1 0 2.5 0 0 1" />
         </circle>
         <circle id="10" c="-2.5,0,0" d="60">
-          <ModificationCount>11</ModificationCount>
+          <ModificationCount>13</ModificationCount>
           <mat m="1 0 0 0 0 1 0 0 0 0 1 0 2.5 0 0 1" />
         </circle>
         <pline id="6" Closed="true">
-          <ModificationCount>5</ModificationCount>
+          <ModificationCount>7</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-37,-30,0</p>
@@ -894,7 +894,7 @@
           </pts>
         </pline>
         <pline id="12" Closed="true">
-          <ModificationCount>5</ModificationCount>
+          <ModificationCount>7</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-37,-30,0</p>
@@ -908,7 +908,7 @@
           </pts>
         </pline>
         <pline id="15" Closed="true">
-          <ModificationCount>5</ModificationCount>
+          <ModificationCount>7</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-37,-30,0</p>
@@ -922,7 +922,7 @@
           </pts>
         </pline>
         <pline id="21" Closed="true">
-          <ModificationCount>5</ModificationCount>
+          <ModificationCount>7</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-37,-30,0</p>
@@ -938,10 +938,10 @@
       </objects>
     </layer>
     <layer name="motor" color="127,255,0" visible="false">
-      <ModificationCount>4</ModificationCount>
+      <ModificationCount>10</ModificationCount>
       <objects>
         <points id="448">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-15.5,15.5</p>
@@ -951,15 +951,15 @@
           </pts>
         </points>
         <circle id="449" d="22">
-          <ModificationCount>14</ModificationCount>
+          <ModificationCount>16</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="23" d="28">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <mat m="Identity" />
         </circle>
         <pline id="24" Closed="true">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -974,7 +974,7 @@
           </pts>
         </pline>
         <points id="25">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <Tag>mounting holes M5</Tag>
           <mat m="Identity" />
           <pts>
@@ -985,7 +985,7 @@
           </pts>
         </points>
         <pline id="26" Closed="true">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <Tag>outline</Tag>
           <mat m="Identity" />
           <pts>
@@ -1000,7 +1000,7 @@
           </pts>
         </pline>
         <pline id="27" Closed="true">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">-35.5,-30,0</p>
@@ -1014,28 +1014,28 @@
           </pts>
         </pline>
         <circle id="28" c="-15.5,15.5,0" d="5.5">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="29" c="15.5,15.5,0" d="5.5">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="30" c="-15.5,-15.5,0" d="5.5">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="31" c="15.5,-15.5,0" d="5.5">
-          <ModificationCount>3</ModificationCount>
+          <ModificationCount>5</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
     <layer name="skim" color="127,255,0" visible="false">
-      <ModificationCount>12</ModificationCount>
+      <ModificationCount>14</ModificationCount>
       <objects>
         <rect id="1" Closed="true" p="-115,-48,0" w="230" h="96">
-          <ModificationCount>13</ModificationCount>
+          <ModificationCount>15</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-115,-48,0</p>
@@ -1045,7 +1045,7 @@
           </pts>
         </rect>
         <rect id="2" Closed="true" p="-105,-48,0" w="210" h="96">
-          <ModificationCount>15</ModificationCount>
+          <ModificationCount>17</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-105,-48,0</p>
@@ -1055,7 +1055,7 @@
           </pts>
         </rect>
         <rect id="9" Closed="true" p="-115,-38,0" w="230" h="76">
-          <ModificationCount>11</ModificationCount>
+          <ModificationCount>13</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-115,-38,0</p>
@@ -1065,7 +1065,7 @@
           </pts>
         </rect>
         <rect id="19" Closed="true" p="-105,-38,0" w="210" h="76">
-          <ModificationCount>11</ModificationCount>
+          <ModificationCount>13</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-105,-38,0</p>
@@ -1080,31 +1080,31 @@
       <ModificationCount>1</ModificationCount>
       <objects>
         <points id="32">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>0,0</p>
           </pts>
         </points>
         <circle id="33" d="22.6">
-          <ModificationCount>10</ModificationCount>
+          <ModificationCount>12</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="34" c="0,2.5,0" d="8">
-          <ModificationCount>6</ModificationCount>
+          <ModificationCount>8</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="35" d="20">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <mat m="Identity" />
         </circle>
       </objects>
     </layer>
-    <layer name="mount" color="127,255,0">
-      <ModificationCount>0</ModificationCount>
+    <layer name="mount" color="127,255,0" visible="false">
+      <ModificationCount>3</ModificationCount>
       <objects>
         <pline id="38" Closed="true">
-          <ModificationCount>7</ModificationCount>
+          <ModificationCount>9</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p b="0.41421356237309503">45.0000015298986,-34.9999980329875,0</p>
@@ -1118,11 +1118,11 @@
           </pts>
         </pline>
         <circle id="39" d="42">
-          <ModificationCount>7</ModificationCount>
+          <ModificationCount>9</ModificationCount>
           <mat m="Identity" />
         </circle>
         <points id="42">
-          <ModificationCount>6</ModificationCount>
+          <ModificationCount>8</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>42.5000012020632,-27.499998142266</p>
@@ -1132,7 +1132,7 @@
           </pts>
         </points>
         <points id="43">
-          <ModificationCount>2</ModificationCount>
+          <ModificationCount>4</ModificationCount>
           <Tag>mounting holes M5</Tag>
           <mat m="Identity" />
           <pts>
@@ -1140,6 +1140,34 @@
             <p>-28.2842707633972,28.2842707633972</p>
             <p>-28.2842707633972,-28.2842707633972</p>
             <p>28.2842707633972,-28.2842707633972</p>
+          </pts>
+        </points>
+      </objects>
+    </layer>
+    <layer name="spacer" color="127,255,0">
+      <ModificationCount>0</ModificationCount>
+      <objects>
+        <points id="8">
+          <ModificationCount>0</ModificationCount>
+          <mat m="0.70710676908493 0.70710676908493 0 0 -0.70710676908493 0.70710676908493 0 0 0 0 1 0 0 0 0 1" />
+          <pts>
+            <p>15.85,0</p>
+            <p>9.70500535404234E-16,15.85</p>
+            <p>-15.85,1.94100107080847E-15</p>
+            <p>-2.9115016062127E-15,-15.85</p>
+          </pts>
+        </points>
+        <circle id="40" d="40">
+          <ModificationCount>1</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <points id="41">
+          <ModificationCount>8</ModificationCount>
+          <mat m="Identity" />
+          <pts>
+            <p>-25,20</p>
+            <p>25,20</p>
+            <p>0,-20</p>
           </pts>
         </points>
       </objects>
@@ -1167,7 +1195,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Value" />
           <CustomMOPFooter state="Value" />
           <Name>1mm_skim</Name>
@@ -1177,7 +1205,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>1</prim>
           </primitive>
@@ -1187,7 +1215,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1219,14 +1247,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>1-8mm_skim</Name>
@@ -1246,7 +1274,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1285,7 +1313,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>ScrewHoles</Name>
@@ -1322,7 +1350,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>ScrewHeads</Name>
@@ -1390,14 +1418,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>1-8mm_skim</Name>
@@ -1407,7 +1435,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>19</prim>
           </primitive>
@@ -1417,10 +1445,10 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
-          <LeadInMove state="Default">
-            <LeadInType>Spiral</LeadInType>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
             <SpiralAngle>0</SpiralAngle>
             <TangentRadius>0</TangentRadius>
             <LeadInFeedrate>0</LeadInFeedrate>
@@ -1456,7 +1484,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Value" />
           <CustomMOPFooter state="Value" />
           <Name>1mm_skim</Name>
@@ -1466,7 +1494,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>9</prim>
           </primitive>
@@ -1476,10 +1504,10 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
-          <LeadInMove state="Default">
-            <LeadInType>Spiral</LeadInType>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
             <SpiralAngle>0</SpiralAngle>
             <TangentRadius>0</TangentRadius>
             <LeadInFeedrate>0</LeadInFeedrate>
@@ -1515,7 +1543,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>MountingHoles</Name>
@@ -1535,7 +1563,7 @@
           <DrillLeadOut state="Default">False</DrillLeadOut>
           <SpiralFlatBase state="Default">True</SpiralFlatBase>
           <LeadOutLength state="Default">0</LeadOutLength>
-          <DrillingMethod state="Value">SpiralMill_CCW</DrillingMethod>
+          <DrillingMethod state="Value">SpiralMill_CW</DrillingMethod>
           <PeckDistance state="Default">0</PeckDistance>
           <RetractHeight state="Default">1</RetractHeight>
           <Dwell state="Default">0</Dwell>
@@ -1545,14 +1573,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>TopWell</Name>
@@ -1572,7 +1600,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1589,14 +1617,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CupPocket</Name>
@@ -1616,7 +1644,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1633,14 +1661,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CutOut</Name>
@@ -1662,7 +1690,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -1781,14 +1809,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>MountingHoles</Name>
@@ -1818,14 +1846,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>RollerPocket</Name>
@@ -1845,7 +1873,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1867,14 +1895,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>ShaftEntry</Name>
@@ -1894,7 +1922,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1911,14 +1939,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>RegistrationLip</Name>
@@ -1939,7 +1967,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -1956,14 +1984,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CutOut</Name>
@@ -1985,7 +2013,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -2102,14 +2130,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>Skim</Name>
@@ -2129,7 +2157,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2146,14 +2174,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>RollerPocket</Name>
@@ -2173,10 +2201,10 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
-          <LeadInMove state="Default">
-            <LeadInType>Spiral</LeadInType>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
             <SpiralAngle>0</SpiralAngle>
             <TangentRadius>0</TangentRadius>
             <LeadInFeedrate>0</LeadInFeedrate>
@@ -2195,14 +2223,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CutOut</Name>
@@ -2224,7 +2252,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -2238,7 +2266,7 @@
             <TabMethod>Automatic</TabMethod>
             <Width>6</Width>
             <Height>2</Height>
-            <MinimumTabs>5</MinimumTabs>
+            <MinimumTabs>4</MinimumTabs>
             <MaximumTabs>6</MaximumTabs>
             <TabDistance>40</TabDistance>
             <SizeThreshold>4</SizeThreshold>
@@ -2249,46 +2277,37 @@
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>159</ParentEntityID>
-              <ParametricPoint>0.099999999999999978</ParametricPoint>
+              <ParametricPoint>0.12499999999999997</ParametricPoint>
               <Normal>
-                <X>0.80901699437494767</X>
-                <Y>0.5877852522924728</Y>
+                <X>0.70710678118654757</X>
+                <Y>0.70710678118654746</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>159</ParentEntityID>
-              <ParametricPoint>0.3</ParametricPoint>
+              <ParametricPoint>0.375</ParametricPoint>
               <Normal>
-                <X>-0.30901699437494734</X>
-                <Y>0.95105651629515364</Y>
+                <X>-0.70710678118654735</X>
+                <Y>0.70710678118654757</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>159</ParentEntityID>
-              <ParametricPoint>0.5</ParametricPoint>
+              <ParametricPoint>0.62499999999999989</ParametricPoint>
               <Normal>
-                <X>-1</X>
-                <Y>1.224606353822377E-16</Y>
+                <X>-0.70710678118654824</X>
+                <Y>-0.70710678118654668</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>159</ParentEntityID>
-              <ParametricPoint>0.69999999999999984</ParametricPoint>
+              <ParametricPoint>0.875</ParametricPoint>
               <Normal>
-                <X>-0.30901699437494823</X>
-                <Y>-0.95105651629515331</Y>
-              </Normal>
-            </HoldingTab>
-            <HoldingTab>
-              <NormalInverted>false</NormalInverted>
-              <ParentEntityID>159</ParentEntityID>
-              <ParametricPoint>0.89999999999999991</ParametricPoint>
-              <Normal>
-                <X>0.8090169943749469</X>
-                <Y>-0.587785252292474</Y>
+                <X>0.70710678118654757</X>
+                <Y>-0.70710678118654757</Y>
               </Normal>
             </HoldingTab>
           </Tabs>
@@ -2314,14 +2333,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>Bearing</Name>
@@ -2341,7 +2360,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2358,14 +2377,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>Inner</Name>
@@ -2386,7 +2405,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2408,14 +2427,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CutOut</Name>
@@ -2437,7 +2456,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -2451,8 +2470,8 @@
             <TabMethod>Manual</TabMethod>
             <Width>5</Width>
             <Height>1.5</Height>
-            <MinimumTabs>7</MinimumTabs>
-            <MaximumTabs>7</MaximumTabs>
+            <MinimumTabs>3</MinimumTabs>
+            <MaximumTabs>4</MaximumTabs>
             <TabDistance>40</TabDistance>
             <SizeThreshold>4</SizeThreshold>
             <UseLeadIns>False</UseLeadIns>
@@ -2471,15 +2490,6 @@
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>3</ParentEntityID>
-              <ParametricPoint>0.28566016410194162</ParametricPoint>
-              <Normal>
-                <X>-0.22578512254802913</X>
-                <Y>0.9741771288815867</Y>
-              </Normal>
-            </HoldingTab>
-            <HoldingTab>
-              <NormalInverted>false</NormalInverted>
-              <ParentEntityID>3</ParentEntityID>
               <ParametricPoint>0.42957750152973156</ParametricPoint>
               <Normal>
                 <X>-0.91384985637785676</X>
@@ -2489,28 +2499,10 @@
             <HoldingTab>
               <NormalInverted>false</NormalInverted>
               <ParentEntityID>3</ParentEntityID>
-              <ParametricPoint>0.57348866711800617</ParametricPoint>
-              <Normal>
-                <X>-0.87430388691106875</X>
-                <Y>-0.48537893787451991</Y>
-              </Normal>
-            </HoldingTab>
-            <HoldingTab>
-              <NormalInverted>false</NormalInverted>
-              <ParentEntityID>3</ParentEntityID>
               <ParametricPoint>0.71275880236092426</ParametricPoint>
               <Normal>
                 <X>-0.24601162545111027</X>
                 <Y>-0.9692668776672928</Y>
-              </Normal>
-            </HoldingTab>
-            <HoldingTab>
-              <NormalInverted>false</NormalInverted>
-              <ParentEntityID>3</ParentEntityID>
-              <ParametricPoint>0.85839776948780377</ParametricPoint>
-              <Normal>
-                <X>0.65707950701750617</X>
-                <Y>-0.75382127952030575</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
@@ -2552,7 +2544,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Value" />
           <CustomMOPFooter state="Value" />
           <Name>1mm_skim</Name>
@@ -2562,7 +2554,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>9</prim>
           </primitive>
@@ -2572,10 +2564,10 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
-          <LeadInMove state="Default">
-            <LeadInType>Spiral</LeadInType>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
             <SpiralAngle>0</SpiralAngle>
             <TangentRadius>0</TangentRadius>
             <LeadInFeedrate>0</LeadInFeedrate>
@@ -2604,14 +2596,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>1-4mm_skim</Name>
@@ -2621,7 +2613,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>19</prim>
           </primitive>
@@ -2631,10 +2623,10 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
-          <LeadInMove state="Default">
-            <LeadInType>Spiral</LeadInType>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
             <SpiralAngle>0</SpiralAngle>
             <TangentRadius>0</TangentRadius>
             <LeadInFeedrate>0</LeadInFeedrate>
@@ -2670,7 +2662,7 @@
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Value" />
           <CustomMOPFooter state="Value" />
           <Name>1mm_skim</Name>
@@ -2680,7 +2672,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>1</prim>
           </primitive>
@@ -2690,7 +2682,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2722,14 +2714,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>1-4mm_skim</Name>
@@ -2739,7 +2731,7 @@
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
           <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Value">ConstantVelocity</VelocityMode>
+          <VelocityMode state="Value">ExactStop</VelocityMode>
           <primitive>
             <prim>2</prim>
           </primitive>
@@ -2749,7 +2741,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Default">0.7</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2781,14 +2773,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>MountingHoles</Name>
@@ -2818,14 +2810,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>MotorLocation</Name>
@@ -2845,7 +2837,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2862,19 +2854,19 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>RegistrationLip</Name>
           <StockSurface state="Default">0</StockSurface>
-          <RoughingClearance state="Value">-0.05</RoughingClearance>
+          <RoughingClearance state="Value">-0.025</RoughingClearance>
           <ClearancePlane state="Default">1</ClearancePlane>
           <SpindleDirection state="Default">CW</SpindleDirection>
           <SpindleSpeed state="Default">8000</SpindleSpeed>
@@ -2890,7 +2882,7 @@
           <CutOrdering state="Default">LevelFirst</CutOrdering>
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <LeadInMove state="Value">
             <LeadInType>None</LeadInType>
@@ -2907,14 +2899,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">4</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Value">300</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>CutOut</Name>
@@ -2936,7 +2928,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -3036,8 +3028,8 @@
       </machineops>
       <OutFile>{$cbfile.name}.motor.nc</OutFile>
       <Stock>
-        <PMin>0,0</PMin>
-        <PMax>0,0</PMax>
+        <PMin>-45,-45,-8</PMin>
+        <PMax>45,45</PMax>
         <Color>255,165,0</Color>
       </Stock>
       <ToolProfile>Unspecified</ToolProfile>
@@ -3052,14 +3044,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">2.5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>ScrewHoles</Name>
@@ -3089,14 +3081,14 @@
           <Style>acetal-generic</Style>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Value">Finishing</RoughingFinishing>
+          <RoughingFinishing state="Value">Roughing</RoughingFinishing>
           <ToolDiameter state="Value">2.5</ToolDiameter>
           <ToolNumber state="Default">0</ToolNumber>
           <ToolProfile state="Default">EndMill</ToolProfile>
           <PlungeFeedrate state="Default">20</PlungeFeedrate>
           <CutFeedrate state="Default">200</CutFeedrate>
           <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default">0,0,0</StartPoint>
+          <StartPoint state="Default" />
           <CustomMOPHeader state="Default" />
           <CustomMOPFooter state="Default" />
           <Name>ScrewHeads</Name>
@@ -3121,7 +3113,7 @@
           <StepOver state="Value">0.5</StepOver>
           <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
           <InsideOutside state="Value">Inside</InsideOutside>
-          <MillingDirection state="Value">Climb</MillingDirection>
+          <MillingDirection state="Value">Conventional</MillingDirection>
           <CollisionDetection state="Default">True</CollisionDetection>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Value">
@@ -3320,7 +3312,7 @@
         <NestMethod>None</NestMethod>
       </Nesting>
     </part>
-    <part Name="Mount">
+    <part Name="Mount" Enabled="false">
       <machineops>
         <drill>
           <Style>alu-generic</Style>
@@ -3404,7 +3396,7 @@
           </LeadInMove>
           <LeadOutMove state="Default" />
           <HoldingTabs state="Value">
-            <TabMethod>Automatic</TabMethod>
+            <TabMethod>Manual</TabMethod>
             <Width>6</Width>
             <Height>1</Height>
             <MinimumTabs>4</MinimumTabs>
@@ -3427,10 +3419,10 @@
             <HoldingTab>
               <NormalInverted>true</NormalInverted>
               <ParentEntityID>39</ParentEntityID>
-              <ParametricPoint>0.37500000000000006</ParametricPoint>
+              <ParametricPoint>0.3770668311191353</ParametricPoint>
               <Normal>
-                <X>0.70710678118654779</X>
-                <Y>-0.70710678118654724</Y>
+                <X>0.71622958814491366</X>
+                <Y>-0.69786472691042889</Y>
               </Normal>
             </HoldingTab>
             <HoldingTab>
@@ -3597,8 +3589,160 @@
         <NestMethod>None</NestMethod>
       </Nesting>
     </part>
+    <part Name="Spacers">
+      <machineops>
+        <drill>
+          <Style>acetal-generic</Style>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Experimental</OptimisationMode>
+          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
+          <ToolDiameter state="Value">2.5</ToolDiameter>
+          <ToolNumber state="Default">0</ToolNumber>
+          <ToolProfile state="Default">EndMill</ToolProfile>
+          <PlungeFeedrate state="Default">20</PlungeFeedrate>
+          <CutFeedrate state="Default">200</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
+          <StartPoint state="Default" />
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>BoltHoles</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">1</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">8000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">ExactStop</VelocityMode>
+          <primitive>
+            <prim>8</prim>
+          </primitive>
+          <TargetDepth state="Value">-8.1</TargetDepth>
+          <DepthIncrement state="Default">1</DepthIncrement>
+          <HoleDiameter state="Value">3</HoleDiameter>
+          <DrillLeadOut state="Default">False</DrillLeadOut>
+          <SpiralFlatBase state="Default">True</SpiralFlatBase>
+          <LeadOutLength state="Default">0</LeadOutLength>
+          <DrillingMethod state="Value">SpiralMill_CW</DrillingMethod>
+          <PeckDistance state="Default">0</PeckDistance>
+          <RetractHeight state="Default">1</RetractHeight>
+          <Dwell state="Default">0</Dwell>
+          <CustomScript state="Default" />
+        </drill>
+        <profile>
+          <Style>acetal-generic</Style>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Experimental</OptimisationMode>
+          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
+          <ToolDiameter state="Value">2.5</ToolDiameter>
+          <ToolNumber state="Default">0</ToolNumber>
+          <ToolProfile state="Default">EndMill</ToolProfile>
+          <PlungeFeedrate state="Default">20</PlungeFeedrate>
+          <CutFeedrate state="Default">200</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
+          <StartPoint state="Default" />
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>CutOut</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">1</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">8000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">ExactStop</VelocityMode>
+          <primitive>
+            <prim>40</prim>
+          </primitive>
+          <TargetDepth state="Value">-8.1</TargetDepth>
+          <DepthIncrement state="Default">1</DepthIncrement>
+          <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
+          <CutOrdering state="Default">LevelFirst</CutOrdering>
+          <CutWidth state="Value">3</CutWidth>
+          <StepOver state="Value">0.5</StepOver>
+          <StepoverFeedrate state="Default">Cut Feedrate</StepoverFeedrate>
+          <InsideOutside state="Default">Outside</InsideOutside>
+          <MillingDirection state="Default">Conventional</MillingDirection>
+          <CollisionDetection state="Default">True</CollisionDetection>
+          <CornerOvercut state="Default">False</CornerOvercut>
+          <LeadInMove state="Value">
+            <LeadInType>None</LeadInType>
+            <SpiralAngle>0</SpiralAngle>
+            <TangentRadius>0</TangentRadius>
+            <LeadInFeedrate>0</LeadInFeedrate>
+          </LeadInMove>
+          <LeadOutMove state="Default" />
+          <HoldingTabs state="Value">
+            <TabMethod>Automatic</TabMethod>
+            <Width>5</Width>
+            <Height>1.5</Height>
+            <MinimumTabs>3</MinimumTabs>
+            <MaximumTabs>6</MaximumTabs>
+            <TabDistance>40</TabDistance>
+            <SizeThreshold>4</SizeThreshold>
+            <UseLeadIns>False</UseLeadIns>
+            <TabStyle>Triangle</TabStyle>
+          </HoldingTabs>
+          <Tabs>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>40</ParentEntityID>
+              <ParametricPoint>0.16666666666666669</ParametricPoint>
+              <Normal>
+                <X>0.49999999999999989</X>
+                <Y>0.86602540378443871</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>40</ParentEntityID>
+              <ParametricPoint>0.49999999999999994</ParametricPoint>
+              <Normal>
+                <X>-1</X>
+                <Y>1.2246063538223773E-16</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>40</ParentEntityID>
+              <ParametricPoint>0.83333333333333315</ParametricPoint>
+              <Normal>
+                <X>0.49999999999999895</X>
+                <Y>-0.86602540378443926</Y>
+              </Normal>
+            </HoldingTab>
+          </Tabs>
+          <SideProfile state="Default" />
+        </profile>
+      </machineops>
+      <OutFile>{$cbfile.name}.spacers.nc</OutFile>
+      <Stock>
+        <PMin>-50,-45,-8</PMin>
+        <PMax>50,45</PMax>
+        <Color>255,165,0</Color>
+      </Stock>
+      <ToolProfile>Unspecified</ToolProfile>
+      <Nesting>
+        <BasePoint>0,5.32907051820075E-15</BasePoint>
+        <NestMethod>PointList</NestMethod>
+        <PointListID>41</PointListID>
+      </Nesting>
+      <NestingItem>
+        <NestingItem>
+          <Location>-25,20</Location>
+          <Transform m="Identity" />
+        </NestingItem>
+        <NestingItem>
+          <Location>25,20</Location>
+          <Transform m="Identity" />
+        </NestingItem>
+        <NestingItem>
+          <Location>0,-20</Location>
+          <Transform m="Identity" />
+        </NestingItem>
+      </NestingItem>
+    </part>
   </parts>
   <ShowCutWidths>true</ShowCutWidths>
-  <ActiveLayer>mount</ActiveLayer>
-  <ActivePart>Mount</ActivePart>
+  <ActiveLayer>spacer</ActiveLayer>
+  <ActivePart>Spacers</ActivePart>
 </CADFile>
