@@ -1,11 +1,12 @@
 
-// Robot parameters
+// Robot parameters.
+// Note this driver issues one physical step every two position increments.
 
 #define CYCLOID_RATIO 21
 #define MICROSTEPS 4
 #define STEPS_PER_REV 200
 
-#define SAFE_LIMIT ((MICROSTEPS * STEPS_PER_REV * CYCLOID_RATIO) / 3)
+#define SAFE_LIMIT ((2 * MICROSTEPS * STEPS_PER_REV * CYCLOID_RATIO) / 4)
 
 // Maximum step rate is half of this number
 #define INTERRUPT_FREQUENCY 8000
