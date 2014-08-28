@@ -1,15 +1,16 @@
 
+// #define DEBUG
+
 // Robot parameters.
-// Note this driver issues one physical step every two position increments.
 
 #define CYCLOID_RATIO 21
 #define MICROSTEPS 4
 #define STEPS_PER_REV 200
 
-#define SAFE_LIMIT ((2 * MICROSTEPS * STEPS_PER_REV * CYCLOID_RATIO) / 4)
+#define SAFE_LIMIT ((MICROSTEPS * STEPS_PER_REV * CYCLOID_RATIO) / 4)
 
-// Maximum step rate is half of this number
-#define INTERRUPT_FREQUENCY 8000
+// Maximum step rate
+#define INTERRUPT_FREQUENCY 4000
 
 // For RAMPS 1.4, mapped to ATMeta2560
 // See ./hardware/arduino/variants/mega/pins_arduino.h
@@ -40,6 +41,10 @@
 #define CLR_Y_STEP() PORTF &= ~_BV(PF6)
 #define SET_Z_STEP() PORTL |= _BV(PL3)
 #define CLR_Z_STEP() PORTL &= ~_BV(PL3)
+
+#define STEP_X() do { SET_X_STEP(); CLR_X_STEP(); } while (0)
+#define STEP_Y() do { SET_Y_STEP(); CLR_Y_STEP(); } while (0)
+#define STEP_Z() do { SET_Z_STEP(); CLR_Z_STEP(); } while (0)
 
 #define SET_X_DIR() PORTF |= _BV(PF1)
 #define CLR_X_DIR() PORTF &= ~_BV(PF1)
@@ -101,6 +106,8 @@ void setup() {
   ENABLE_X_MOTOR(); // for now
   ENABLE_Y_MOTOR();
   ENABLE_Z_MOTOR();
+  
+  Serial.begin(9600);
 }
 
 volatile uint16_t xPosition = 0;
@@ -115,12 +122,13 @@ volatile uint16_t zTarget = 0;
 #define ACCEL_STEPS 75
 const uint8_t accelTab[] = {71,29,22,19,17,15,14,13,12,11,11,10,10,10,9,9,9,9,8,8,8,8,8,7,7,7,7,7,7,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,1};
 
-volatile uint8_t xAccelStep = 0; // the acceleration step we are on, index into accelTab[]
-volatile uint16_t xTicksRemaining = 1; // number of ticks before next step is issued
-volatile uint8_t yAccelStep = 0;
-volatile uint16_t yTicksRemaining = 1; 
-volatile uint8_t zAccelStep = 0; 
-volatile uint16_t zTicksRemaining = 1;
+// Accessed only within ISR, so no need for volatile
+uint8_t xAccelStep = 0; // the acceleration step we are on, index into accelTab[]
+uint8_t xTicksRemaining = 1; // number of ticks before next step is issued
+uint8_t yAccelStep = 0;
+uint8_t yTicksRemaining = 1; 
+uint8_t zAccelStep = 0; 
+uint8_t zTicksRemaining = 1;
 
 ISR(TIMER0_COMPA_vect) {
   
@@ -140,10 +148,16 @@ ISR(TIMER0_COMPA_vect) {
     
     if (xPosition < xTarget) {
       SET_X_DIR();
-      if (xPosition < SAFE_LIMIT) ++xPosition;
+      if (xPosition < SAFE_LIMIT) {
+        ++xPosition;
+        STEP_X();
+      }
     } else if (xPosition > xTarget) {
       CLR_X_DIR();
-      if (!AT_X_MIN()) --xPosition;
+      if (!AT_X_MIN()) {
+        --xPosition;
+        STEP_X();
+      }
     }  
   }
   
@@ -160,10 +174,16 @@ ISR(TIMER0_COMPA_vect) {
     
     if (yPosition < yTarget) {
       SET_Y_DIR();
-      if (yPosition < SAFE_LIMIT) ++yPosition;
+      if (yPosition < SAFE_LIMIT) {
+        ++yPosition;
+        STEP_Y();
+      }
     } else if (yPosition > yTarget) {
       CLR_Y_DIR();
-      if (!AT_Y_MIN()) --yPosition;
+      if (!AT_Y_MIN()) {
+        --yPosition;
+        STEP_Y();
+      }
     }  
   }
   
@@ -180,31 +200,22 @@ ISR(TIMER0_COMPA_vect) {
     
     if (zPosition < zTarget) {
       SET_Z_DIR();
-      if (zPosition < SAFE_LIMIT) ++zPosition;
+      if (zPosition < SAFE_LIMIT) {
+        ++zPosition;
+        STEP_Z();
+      }
     } else if (zPosition > zTarget) {
       CLR_Z_DIR();
-      if (!AT_Z_MIN())--zPosition;
+      if (!AT_Z_MIN()) {
+        --zPosition;
+        STEP_Z();
+      }
     }  
-  }
-  
-  if ((xPosition & STEP_BIT) != 0) {
-    SET_X_STEP();
-  } else {
-    CLR_X_STEP();
   } 
- 
-  if ((yPosition & STEP_BIT) != 0) {
-    SET_Y_STEP();
-  } else {
-    CLR_Y_STEP();
-  } 
-
-  if ((zPosition & STEP_BIT) != 0) {
-    SET_Z_STEP();
-  } else {
-    CLR_Z_STEP();
-  }   
 }
+
+// Note: target updates that cause an instant change of direction
+// will not accelerate or decelerate. Wait for motion to finish before doing this.
 
 void moveToX(uint16_t target) {
   if (target > SAFE_LIMIT) target = SAFE_LIMIT;
@@ -227,6 +238,54 @@ void moveToZ(uint16_t target) {
   sei();
 }
 
+uint16_t getPositionX() {
+  uint16_t result;
+  cli();
+  result = xPosition; // atomic access
+  sei();
+  return result;
+}
+
+uint16_t getPositionY() {
+  uint16_t result;
+  cli();
+  result = yPosition;
+  sei();
+  return result;
+}
+
+uint16_t getPositionZ() {
+  uint16_t result;
+  cli();
+  result = zPosition;
+  sei();
+  return result;
+}
+
+boolean isMotionDoneX() {
+  boolean result;
+  cli();
+  result = (xPosition == xTarget);
+  sei();
+  return result;
+}
+
+boolean isMotionDoneY() {
+  boolean result;
+  cli();
+  result = (yPosition == yTarget);
+  sei();
+  return result;
+}
+
+boolean isMotionDoneZ() {
+  boolean result;
+  cli();
+  result = (zPosition == zTarget);
+  sei();
+  return result;
+}
+
 boolean isHomeX() {
   return AT_X_MIN();
 }
@@ -241,15 +300,21 @@ boolean isHomeZ() {
 
 void loop() {
   
-  if (xPosition == xTarget) {
-    moveToX(xTarget == 0 ? 10000 : 0);
+#ifdef DEBUG
+  Serial.print("x: "); Serial.println(getPositionX());
+  Serial.print("y: "); Serial.println(getPositionY());
+  Serial.print("z: "); Serial.println(getPositionZ());
+#endif
+  
+  if (isMotionDoneX()) {
+    moveToX(xTarget == 0 ? 4000 : 0);
   }
   
-  if (yPosition == yTarget) {
-    moveToY(yTarget == 0 ? 7500 : 0);
+  if (isMotionDoneY()) {
+    moveToY(yTarget == 0 ? 3000 : 0);
   }
   
-  if (zPosition == zTarget) {
-    moveToZ(zTarget == 0 ? 5000 : 0);
+  if (isMotionDoneZ()) {
+    moveToZ(zTarget == 0 ? 2000 : 0);
   }
 }
