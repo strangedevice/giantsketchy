@@ -53,6 +53,14 @@
 #define SET_Z_DIR() PORTL |= _BV(PL1)
 #define CLR_Z_DIR() PORTL &= ~_BV(PL1)
 
+#define FORWARD_X() CLR_X_DIR()
+#define FORWARD_Y() CLR_Y_DIR()
+#define FORWARD_Z() CLR_Z_DIR()
+
+#define BACKWARD_X() SET_X_DIR()
+#define BACKWARD_Y() SET_Y_DIR()
+#define BACKWARD_Z() SET_Z_DIR()
+
 // Enables are active low on Pololu
 #define ENABLE_X_MOTOR() PORTD &= ~_BV(PD7)
 #define DISABLE_X_MOTOR() PORTD |= _BV(PD7)
@@ -110,12 +118,12 @@ void setup() {
   Serial.begin(9600);
 }
 
-volatile uint16_t xPosition = 0;
-volatile uint16_t yPosition = 0;
-volatile uint16_t zPosition = 0;
-volatile uint16_t xTarget = 0;
-volatile uint16_t yTarget = 0;
-volatile uint16_t zTarget = 0;
+volatile uint16_t xPosition = SAFE_LIMIT;
+volatile uint16_t yPosition = SAFE_LIMIT;
+volatile uint16_t zPosition = SAFE_LIMIT;
+volatile uint16_t xTarget = xPosition;
+volatile uint16_t yTarget = yPosition;
+volatile uint16_t zTarget = zPosition;
 
 // Table approximates a square root function (at constant acceleration, elapsed time goes as square root of distance).
 // Acceleration increases towards the far end (non-linear), so that we reach max speed in a reasonable time.
@@ -147,13 +155,13 @@ ISR(TIMER0_COMPA_vect) {
     xTicksRemaining = accelTab[xAccelStep];
     
     if (xPosition < xTarget) {
-      SET_X_DIR();
+      FORWARD_X();
       if (xPosition < SAFE_LIMIT) {
         ++xPosition;
         STEP_X();
       }
     } else if (xPosition > xTarget) {
-      CLR_X_DIR();
+      BACKWARD_X();
       if (!AT_X_MIN()) {
         --xPosition;
         STEP_X();
@@ -173,13 +181,13 @@ ISR(TIMER0_COMPA_vect) {
     yTicksRemaining = accelTab[yAccelStep];
     
     if (yPosition < yTarget) {
-      SET_Y_DIR();
+      FORWARD_Y();
       if (yPosition < SAFE_LIMIT) {
         ++yPosition;
         STEP_Y();
       }
     } else if (yPosition > yTarget) {
-      CLR_Y_DIR();
+      BACKWARD_Y();
       if (!AT_Y_MIN()) {
         --yPosition;
         STEP_Y();
@@ -199,13 +207,13 @@ ISR(TIMER0_COMPA_vect) {
     zTicksRemaining = accelTab[zAccelStep];
     
     if (zPosition < zTarget) {
-      SET_Z_DIR();
+      FORWARD_Z();
       if (zPosition < SAFE_LIMIT) {
         ++zPosition;
         STEP_Z();
       }
     } else if (zPosition > zTarget) {
-      CLR_Z_DIR();
+      BACKWARD_Z();
       if (!AT_Z_MIN()) {
         --zPosition;
         STEP_Z();
@@ -298,6 +306,8 @@ boolean isHomeZ() {
   return AT_Z_MIN();
 }
 
+boolean homed = false;
+
 void loop() {
   
 #ifdef DEBUG
@@ -306,15 +316,28 @@ void loop() {
   Serial.print("z: "); Serial.println(getPositionZ());
 #endif
   
-  if (isMotionDoneX()) {
-    moveToX(xTarget == 0 ? 4000 : 0);
+  if (!homed && !isHomeX() && isMotionDoneX()) {
+    moveToX(getPositionX() - 5); // NB: this can wrap around! Should check.
   }
   
-  if (isMotionDoneY()) {
-    moveToY(yTarget == 0 ? 3000 : 0);
+  if (!homed && !isHomeY() && isMotionDoneY()) {
+    moveToY(getPositionY() - 5); 
   }
   
-  if (isMotionDoneZ()) {
-    moveToZ(zTarget == 0 ? 2000 : 0);
+  if (!homed && !isHomeZ() && isMotionDoneZ()) {
+    moveToZ(getPositionZ() - 5); 
+  }
+  
+  if (isHomeX() && isHomeY() && isHomeZ()) {
+    homed = true;
+    xPosition = 0;
+    yPosition = 0;
+    zPosition = 0;
+  }
+  
+  if (homed) {
+    moveToX(SAFE_LIMIT / 2);
+    moveToY(SAFE_LIMIT / 2);
+    moveToZ(SAFE_LIMIT / 2);
   }
 }
