@@ -88,21 +88,24 @@ void setupTimerISR() {
   
   cli(); // disable interrupts
 
-  // Use 8-bit timer0 to drive steppers
+  // Use 8-bit timer2 to drive steppers (timer 0 is used by millis())
+  
+  // Enable power to timer2
+  PRR0 &= ~(1 << PRTIM2);
   
   // CTC mode: clear counter and interrupt when OCR0A is matched
-  TCCR0A = (1 << WGM01);
+  TCCR2A = (1 << WGM21);
   
   // prescaler divides clk by 64 (250 kHz tick)
-  TCCR0B = (1 << CS01) | (1 << CS00);
+  TCCR2B = (1 << CS21) | (1 << CS20);
   
   // set compare match register for frequency (value must be <256)
-  OCR0A = (uint8_t)(16000000L / ((uint32_t) INTERRUPT_FREQUENCY * 64L) - 1L);
+  OCR2A = (uint8_t)(16000000L / ((uint32_t) INTERRUPT_FREQUENCY * 64L) - 1L);
   
-  TCNT0  = 0; //initialize counter value
+  TCNT2 = 0; //initialize counter value
   
   // enable timer compare interrupt
-  TIMSK0 |= (1 << OCIE0A);
+  TIMSK2 |= (1 << OCIE2A);
 
   sei(); // enable interrupts
 }
@@ -130,7 +133,7 @@ uint8_t zTicksMin = 1;
 uint8_t zAccelStep = 0; 
 uint8_t zTicksRemaining = 1;
 
-ISR(TIMER0_COMPA_vect) {
+ISR(TIMER2_COMPA_vect) {
   
   if (--xTicksRemaining == 0) {
     uint16_t stepsToGo = xPosition > xTarget ? xPosition - xTarget : xTarget - xPosition;
