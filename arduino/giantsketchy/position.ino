@@ -4,109 +4,49 @@
 // Manages xyz->theta? transformation and servo drive for delta robots
 // Maths from http://forums.trossenrobotics.com/tutorials/introduction-129/delta-robot-kinematics-3276/
 
-#include "pins.h"
-
+// trigonometric constants
+const float sqrt3 = sqrt(3.0);
+const float pi = 3.141592653;
+const float sin120 = sqrt3 / 2.0;   
+const float cos120 = -0.5;        
+const float tan60 = sqrt3;
+const float sin30 = 0.5;
+const float tan30 = 1.0 / sqrt3;
+ 
 // robot geometry for our rig
- // (look at pics in link above for explanation)
- const float side_from_radius = 3.466;  // we want the sides of the base and effector triangles, 
-                                        // but what we can easily measure is the distance from the center to the midpoint of the side
-                                        // so multiply that by 2/tan(30)
- const float e = side_from_radius * 25.0;     // end effector
- const float f = side_from_radius * 48;     // base
- const float re = 220.0;  // effector arm length
- const float rf = 37.0;   // base arm length
+// (look at pics in link above for explanation)
+const float side_from_radius = 2.0 / tan30; // we want the sides of the base and effector triangles, 
+                                            // but what we can easily measure is the distance from the center to the midpoint of the side
+                                            // so multiply that by 2/tan(30)
+                                            
+const float e = side_from_radius * 25.0;    // end effector
+const float f = side_from_radius * 48;      // base
+const float re = 220.0;                     // effector arm length
+const float rf = 37.0;                      // base arm length
  
  // for other dimensional setup, see the top of giantsketchy.ino
  
 // limits of servo motion for our rig
-int minServoPos = 0;
-int maxServoPos = 160;
+const int minServoPos = 0;
+const int maxServoPos = 100;
 // see transformToServoAngle for a description of how we use angles
-
-
 
 #define STATUS_LED 13 // lights up for bad positions
 
-/*
-// from http://code.google.com/p/arduino/source/browse/#svn/trunk/libraries/Servo
-#define MIN_PULSE_WIDTH       544.0     // the shortest pulse sent to a servo  
-#define MAX_PULSE_WIDTH      2400.0     // the longest pulse sent to a servo 
-
-Servo s0;
-Servo s1;
-Servo s2;
-*/
-
-StepperWrapper s0 = StepperWrapper(X_STEP_PIN, X_DIR_PIN, X_ENABLE_PIN, X_MIN_PIN);
-StepperWrapper s1 = StepperWrapper(Y_STEP_PIN, Y_DIR_PIN, Y_ENABLE_PIN, Y_MIN_PIN);
-StepperWrapper s2 = StepperWrapper(Z_STEP_PIN, Z_DIR_PIN, Z_ENABLE_PIN, Z_MIN_PIN);
+StepperWrapper s0 = StepperWrapper(AXIS_0);
+StepperWrapper s1 = StepperWrapper(AXIS_1);
+StepperWrapper s2 = StepperWrapper(AXIS_2);
 
 boolean servosAttached = false;
-
- 
   
- int delta_calcInverse(float x0, float y0, float z0, float &theta1, float &theta2, float &theta3);
- int delta_calcAngleYZ(float x0, float y0, float z0, float &theta);
- boolean transformToServoAngle( float &theta );
-//void servoWriteFloat( Servo *s, float angle);
-//void servoWriteCalibrated( Servo *s, float angle);
-//boolean uSForAngle( float angle, int*result) ;
-
-
-
-
+int delta_calcInverse(float x0, float y0, float z0, float &theta1, float &theta2, float &theta3);
+int delta_calcAngleYZ(float x0, float y0, float z0, float &theta);
+boolean transformToServoAngle(float &theta);
 
 void setupPosition()
 {
-   pinMode(STATUS_LED, OUTPUT);
-   
+  pinMode(STATUS_LED, OUTPUT);   
   turnOnServos();
-   
-   /*
-   int s =  MIN_PULSE_WIDTH;  // gives us 28 degrees (above horizontal)
-   s0.write( s);
-   s1.write( s );
-   s2.write( s );
-   delay(10000);
-   */
-   /*
-   int s =  ( MIN_PULSE_WIDTH + MAX_PULSE_WIDTH ) / 2;  // gives us -66 degrees (below horizontal)
-   s0.write( s);
-   s1.write( s );
-   s2.write( s );
-   delay(10000); 
-   */
-   /*
-  // 120 degrees for checking servo cal - should be parallel with body
-   servoWriteFloat( &s0, 120 );
-   servoWriteFloat( &s1, 120 );
-   servoWriteFloat( &s2, 120 ); 
-   delay(20000); 
-   */
-   
-   /*
-   // 30 degrees for checking servo cal - should be horizontal
-   servoWriteFloat( &s0, 30 );
-   servoWriteFloat( &s1, 30 );
-   servoWriteFloat( &s2, 30 ); 
-   delay(20000); 
-   */
-   
-   // 
-   // delay(2000); 
-   
-   
-   // goTo( 0,0,-10); // for pen setup
-   // delay( 2000 );
-   //resolutionTest();
-   
-  /* s = 0;
-   s0.write( s);
-   s1.write( s );
-   s2.write( s );
-   delay(1000); 
-   */
-  
 }
 
 void loopPosition()
@@ -118,7 +58,7 @@ void loopPosition()
 
 boolean anyHoming()
 {
-    return !s0.isHome() || !s1.isHome() || !s2.isHome();
+  return !s0.wasHomed() || !s1.wasHomed() || !s2.wasHomed();
 }
 
 void homePosition()
@@ -130,51 +70,42 @@ void homePosition()
 
 void turnOnServos()
 {
-  if( ! servosAttached )
+  if(!servosAttached )
   {
-    s0.enable( true );
-    s1.enable( true );
-    s2.enable( true );
- 
-  
+    s0.enable(true);
+    s1.enable(true);
+    s2.enable(true);  
   }
-  
-   servosAttached = true;
+  servosAttached = true;
 }
+
 void turnOffServos()
 {
-  if( servosAttached )
+  if(servosAttached)
   {
-       s0.enable( false );
-       s1.enable( false );
-       s2.enable( false );
+    s0.enable(false);
+    s1.enable(false);
+    s2.enable(false);
  
   }
   servosAttached = false;
-  
 }
-
-
 
 int goTo( float x0, float y0, float z0 )
 {
-   float theta1;
-   float theta2;
-   float theta3;
+  float theta1;
+  float theta2;
+  float theta3;
    
-   static float last_theta1;
-   static float last_theta2;
-   static float last_theta3;
-   
-  
-    static float tLast = 0;
-   
-   
-     
-  if( 0 != delta_calcInverse( x0,  y0,  z0 + baseZ, theta1, theta2, theta3))
-  {
+  static float last_theta1;
+  static float last_theta2;
+  static float last_theta3;
     
-    #ifdef DO_LOGGING
+  static float tLast = 0;
+       
+  if( 0 != delta_calcInverse( x0,  y0,  z0 + baseZ, theta1, theta2, theta3))
+  {  
+#ifdef DO_LOGGING
     Serial.print ("Unreachable pos: ");
     Serial.print (x0);
     Serial.print (", ");
@@ -182,186 +113,80 @@ int goTo( float x0, float y0, float z0 )
     Serial.print (", ");
     Serial.print (z0);
     Serial.print ("\n");
-     #endif
+#endif
      
-      digitalWrite(STATUS_LED,true); //Status LED...
-      return 0; // no pos
+    digitalWrite(STATUS_LED,true); //Status LED...
+    return 0; // no pos
   }
   
-  //digitalWrite(STATUS_LED,false);
+  digitalWrite(STATUS_LED, false);
   
-
-   //#ifdef DO_LOGGING
-    //Serial.print ("Pos: ");
-    //Serial.print (x0);
-    //Serial.print (", ");
-    //Serial.print (y0);
-    //Serial.print (", ");
-    //Serial.print (z0);
-    //Serial.print ("\n");
-     //#endif
-
-  /*
-  boolean success = true; 
-  int u1;
-  int u2;
-  int u3;
-  
-   success &=  uSForAngle( theta1, &u1);
-   success &=  uSForAngle( theta2, &u2);
-   success &=  uSForAngle( theta3, &u3);
-   
- 
-  if( ! success )
-  {
-  #ifdef DO_LOGGING
-    Serial.print ("Unreachable servo angle\n");
-  #endif
-   return 0;
-  }
-  
-  digitalWrite(STATUS_LED,! success);
-  
-  s0.writeMicroseconds( u1 );
-  s1.writeMicroseconds( u2 );
-  s2.writeMicroseconds( u3 );
-  */
+#ifdef DO_LOGGING
+  Serial.print ("Pos: ");
+  Serial.print (x0);
+  Serial.print (", ");
+  Serial.print (y0);
+  Serial.print (", ");
+  Serial.print (z0);
+  Serial.print ("\n");
+#endif
 
   float tNow = millis();
  
-  setServoSpeedAndPosition( &s0, tLast, tNow, theta1, last_theta1 );
-  setServoSpeedAndPosition( &s1, tLast, tNow, theta2, last_theta2 );
-  setServoSpeedAndPosition( &s2, tLast, tNow, theta3, last_theta3 );
+  setServoSpeedAndPosition(&s0, tLast, tNow, theta1, last_theta1);
+  setServoSpeedAndPosition(&s1, tLast, tNow, theta2, last_theta2);
+  setServoSpeedAndPosition(&s2, tLast, tNow, theta3, last_theta3);
+  
   last_theta1 = theta1;
   last_theta2 = theta2;
   last_theta3 = theta3;
   tLast = tNow;
+  
   return 1;
 }
 
-void setServoSpeedAndPosition( StepperWrapper *stepper, float t1, float t2, float a1, float a2 )
+void setServoSpeedAndPosition(StepperWrapper *stepper, float t1, float t2, float a1, float a2)
 {
-  if( t1 == 0 )
+  if(t1 == 0)
     return;
     
-  float degPerMillisec = fabs( (a1-a2) / (t1-t2)); // degrees per millisec
+  float degPerMillisec = fabs((a1-a2) / (t1-t2)); // degrees per millisec
   
-  stepper->setSpeedAndPosition( degPerMillisec, a1 );
+  stepper->setSpeedAndPosition(degPerMillisec, a1);
   
-  if( degPerMillisec > max_servo_speed )
+  if(degPerMillisec > max_servo_speed) // only needed for logging?
     max_servo_speed = degPerMillisec;
     
   sum_servo_speed += degPerMillisec;
   num_servo_speed += 1.0;
 }
 
-  
-
-/*
-void servoWriteCalibrated( Servo *s, float angle)
-{
-  int uSecs;
-  if( uSForAngle( angle, &uSecs))
-    s->writeMicroseconds(uSecs);
-}
-
-// Use writeMicroseconds instead of write() to get more servo resolution, copy conversion formula from Arduino Servo lib source
-// This gets us something like ten times the resolution, so we get much smoother motion.
-// This version is uncalibrated and is replaced by servoWriteCalibrated above.
-
-void servoWriteFloat( Servo *s, float angle)
-{  
-
-  float servoCal = -10.0;
-  
-  angle -= servoCal;
-  
-  if(angle < 0) 
-    angle = 0;
-    
-    
-  if(angle > 180) 
-    angle = 180;
-    
-   int uS = MIN_PULSE_WIDTH + angle * ( MAX_PULSE_WIDTH - MIN_PULSE_WIDTH ) / 180.0;      
-
-  s->writeMicroseconds(uS);
-}
-
-void resolutionTest()
-{
-  float a;
-  for( a = 0; a < 5; a += 0.1 )
-  {
-    #ifdef DO_LOGGING
-    Serial.print (a);
-    Serial.print ("\n");
-    #endif
-    servoWriteFloat( &s0, a );
-    delay( 1000 );
-  }
-}
-
-
-boolean uSForAngle( float angle, int*result) // expect angle  in geometry frame, 0 with the arm horizontal, -90 at full extend downwards
-{  
-
-
-   int uS = 822 - angle * 9.94;  // magic calibration figures found by measuring our servos
-   
-  if( uS < MIN_PULSE_WIDTH  )
-    return false;
-    
-  if( uS > MAX_PULSE_WIDTH  )
-    return false;
-
-  *result = uS;
-  return true;
-  //s->writeMicroseconds(uS);
-}
-*/
-
 boolean transformToServoAngle( float &theta )
 {
-  // Our servos go from 0 (max retract) to 120 (full extend, arm in line with servo body) to 170 (overextended)
-  
+  // Giant Sketchy's arms go from 0 (max retract) to about 140 (full extend, arm in line with servo body)  
   // Theta from the geometry maths has 0 with the arm horizontal, -90 at full extend
   
   theta = -theta;
-  theta = theta + 30;
+  theta = theta + 50; // Giant Skethcy's arms are horizontal at 50 degrees
   
   boolean success = true;
   
-  if( theta < minServoPos )
+  if(theta < minServoPos )
   {
-      success = false;
+     success = false;
      theta = minServoPos;
   }
     
-  if( theta > maxServoPos )
-    {
-      success = false;
-     theta = maxServoPos; 
-    }
+  if(theta > maxServoPos)
+  {
+    success = false;
+    theta = maxServoPos; 
+  }
     
-    return success;
+  return success;
 }
 
-
-
-  
-
-
- 
- // trigonometric constants
- const float sqrt3 = sqrt(3.0);
- const float pi = 3.141592653;    // PI
- const float sin120 = sqrt3/2.0;   
- const float cos120 = -0.5;        
- const float tan60 = sqrt3;
- const float sin30 = 0.5;
- const float tan30 = 1/sqrt3;
- 
+/* Assuming we don't need this...
  // forward kinematics: (theta1, theta2, theta3) -> (x0, y0, z0)
  // returned status: 0=OK, -1=non-existing position
  int delta_calcForward(float theta1, float theta2, float theta3, float &x0, float &y0, float &z0) {
@@ -411,30 +236,36 @@ boolean transformToServoAngle( float &theta )
      y0 = (a2*z0 + b2)/dnm;
      return 0;
  }
+*/
+
+// inverse kinematics
+// helper functions, calculates angle theta1 (for YZ-pane)
+int delta_calcAngleYZ(float x0, float y0, float z0, float &theta) {
+  float y1 = -0.5 * 0.57735 * f; // f/2 * tg 30
+  y0 -= 0.5 * 0.57735    * e;    // shift center to edge
+  // z = a + b*y
+  float a = (x0*x0 + y0*y0 + z0*z0 +rf*rf - re*re - y1*y1) / (2*z0);
+  float b = (y1 - y0) / z0;
+  
+  // discriminant
+  float d = -(a + b*y1) * (a + b* y1) + rf*(b*b*rf + rf); 
+  if (d < 0) return -1; // non-existing point
+  
+  float yj = (y1 - a*b - sqrt(d)) / (b*b + 1); // choosing outer point
+  float zj = a + b*yj;
+  theta = 180.0*atan(-zj / (y1 - yj)) / pi + ((yj > y1) ? 180.0 : 0.0);
+  
+  return 0;
+}
  
- // inverse kinematics
- // helper functions, calculates angle theta1 (for YZ-pane)
- int delta_calcAngleYZ(float x0, float y0, float z0, float &theta) {
-     float y1 = -0.5 * 0.57735 * f; // f/2 * tg 30
-     y0 -= 0.5 * 0.57735    * e;    // shift center to edge
-     // z = a + b*y
-     float a = (x0*x0 + y0*y0 + z0*z0 +rf*rf - re*re - y1*y1)/(2*z0);
-     float b = (y1-y0)/z0;
-     // discriminant
-     float d = -(a+b*y1)*(a+b*y1)+rf*(b*b*rf+rf); 
-     if (d < 0) return -1; // non-existing point
-     float yj = (y1 - a*b - sqrt(d))/(b*b + 1); // choosing outer point
-     float zj = a + b*yj;
-     theta = 180.0*atan(-zj/(y1 - yj))/pi + ((yj>y1)?180.0:0.0);
-     return 0;
- }
- 
- // inverse kinematics: (x0, y0, z0) -> (theta1, theta2, theta3)
- // returned status: 0=OK, -1=non-existing position
- int delta_calcInverse(float x0, float y0, float z0, float &theta1, float &theta2, float &theta3) {
-     theta1 = theta2 = theta3 = 0;
-     int status = delta_calcAngleYZ(x0, y0, z0, theta1);
-     if (status == 0) status = delta_calcAngleYZ(x0*cos120 + y0*sin120, y0*cos120-x0*sin120, z0, theta2);  // rotate coords to +120 deg
-     if (status == 0) status = delta_calcAngleYZ(x0*cos120 - y0*sin120, y0*cos120+x0*sin120, z0, theta3);  // rotate coords to -120 deg
-     return status;
- }
+// inverse kinematics: (x0, y0, z0) -> (theta1, theta2, theta3)
+// returned status: 0=OK, -1=non-existing position
+int delta_calcInverse(float x0, float y0, float z0, float &theta1, float &theta2, float &theta3) {
+  theta1 = theta2 = theta3 = 0;
+     
+  int status = delta_calcAngleYZ(x0, y0, z0, theta1);
+  if (status == 0) status = delta_calcAngleYZ(x0*cos120 + y0*sin120, y0*cos120-x0*sin120, z0, theta2);  // rotate coords to +120 deg
+  if (status == 0) status = delta_calcAngleYZ(x0*cos120 - y0*sin120, y0*cos120+x0*sin120, z0, theta3);  // rotate coords to -120 deg
+     
+  return status;
+}

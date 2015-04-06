@@ -81,7 +81,7 @@ boolean loopMotion() // move one increment towards targetXYZ at constant speed
   
   dt =  now - currT;
   
-   if( stopAtEnd && inBrakingZone(distance))
+  if( stopAtEnd && inBrakingZone(distance))
   {
     currSpeed -= acceleration * dt;
     if( currSpeed < minSpeed )

@@ -10,7 +10,7 @@
 #define SAFE_LIMIT ((MICROSTEPS * STEPS_PER_REV * CYCLOID_RATIO) / 4)
 
 // Maximum step rate
-#define INTERRUPT_FREQUENCY 4000
+#define INTERRUPT_FREQUENCY 8000
 
 // For RAMPS 1.4, mapped to ATMeta2560
 // See ./hardware/arduino/variants/mega/pins_arduino.h

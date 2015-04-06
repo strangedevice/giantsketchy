@@ -1,8 +1,4 @@
-//#include <NewSoftSerial.h>
 
-
-
-#include <AccelStepper.h> 
 #include "StepperWrapper.h"
  
 #define  DO_LOGGING
@@ -24,9 +20,7 @@ boolean addPoint( int x, int y, int z, int overhead = 2 );
 
 
 void setup() 
-{ 
-  
-  
+{   
   #ifdef DO_LOGGING
   Serial.begin (9600); // for debugging
 
@@ -37,6 +31,7 @@ void setup()
   //setupRangeSensor();
   setupPosition();
   setupMotion();
+  setupTimerISR();
   
   setupBluetooth();
   
