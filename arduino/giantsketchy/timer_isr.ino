@@ -96,8 +96,8 @@ void setupTimerISR() {
   // CTC mode: clear counter and interrupt when OCR0A is matched
   TCCR2A = (1 << WGM21);
   
-  // prescaler divides clk by 64 (250 kHz tick)
-  TCCR2B = (1 << CS21) | (1 << CS20);
+  // prescaler divides clk by 64 (250 kHz tick) (timer0 differs here)
+  TCCR2B = (1 << CS22);
   
   // set compare match register for frequency (value must be <256)
   OCR2A = (uint8_t)(16000000L / ((uint32_t) INTERRUPT_FREQUENCY * 64L) - 1L);
