@@ -1,10 +1,11 @@
 
 #include "StepperWrapper.h"
  
-#define  DO_LOGGING
+#undef DO_LOGGING
 
 // For other dimensional setup, see the top of position.ino
-float baseZ = 220; // neutral plane for our drawing - we get about +-70mm in x and y on the 220 plane
+// float baseZ = 220; // neutral plane for our drawing - we get about +-70mm in x and y on the 220 plane
+float baseZ = 500; // neutral plane for our drawing - Giant Sketchy
 
 int numPoints = 0;
 boolean pathWorking = true;
@@ -18,14 +19,13 @@ float num_servo_speed = 1.0;
 void moveTo( float x0, float y0, float z0, boolean s = true );
 boolean addPoint( int x, int y, int z, int overhead = 2 );
 
-
 void setup() 
 {   
-  #ifdef DO_LOGGING
   Serial.begin (9600); // for debugging
-
+  
+#ifdef DO_LOGGING
   Serial.print ("setup\n");
-  #endif
+#endif
 
   setupControls();
   //setupRangeSensor();
@@ -40,9 +40,6 @@ void setup()
   //r startReadingBluetooth();
   startHoming();
 }
-
-
-
 
 float z = 0;
 boolean wasOff = false;
@@ -61,7 +58,7 @@ void loop()
      
   if( state == STATE_HOME )
   {
-    if( ! anyHoming())
+    if( !anyHoming())
       startReadingBluetooth();
   }
   

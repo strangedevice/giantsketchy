@@ -4,7 +4,7 @@
 // #define DEBUG
 
 // Maximum step rate
-#define INTERRUPT_FREQUENCY 4000
+#define INTERRUPT_FREQUENCY 8000
 
 // For RAMPS 1.4, mapped to ATMeta2560
 // See ./hardware/arduino/variants/mega/pins_arduino.h
@@ -265,7 +265,7 @@ void disableZ() {
 // The maximum speed available is INTERRUPT_FREQUENCY
 
 void setMaxSpeedX(float stepsPerSec) {
-  xTicksMin = ((float)INTERRUPT_FREQUENCY / stepsPerSec) + 0.5; // NB: truncation 
+  xTicksMin = ((float)INTERRUPT_FREQUENCY / stepsPerSec) + 0.5; // NB: truncation
 }
 
 void setMaxSpeedY(float stepsPerSec) {
@@ -357,7 +357,7 @@ void homeX() {
 }
 
 void homeY() {
-  setMaxSpeedX(INTERRUPT_FREQUENCY / 8); // go slowly
+  setMaxSpeedY(INTERRUPT_FREQUENCY / 8); // go slowly
   cli();
   yPosition = SAFE_LIMIT;
   yTarget = 0;
@@ -365,7 +365,7 @@ void homeY() {
 }
 
 void homeZ() {
-  setMaxSpeedX(INTERRUPT_FREQUENCY / 8); // go slowly
+  setMaxSpeedZ(INTERRUPT_FREQUENCY / 8); // go slowly
   cli();
   zPosition = SAFE_LIMIT;
   zTarget = 0;

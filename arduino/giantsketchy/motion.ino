@@ -4,8 +4,6 @@
 // implements maximum speed and maximum acceleration limits
 // decelerates to a stop at the end of each line
 
-
-
 float currX = 0;
 float currY = 0;
 float currZ = 0;
@@ -21,27 +19,26 @@ boolean stopAtEnd = true;
 //float maxSpeed = 0.600; // mm / millisec - 0.600 is good
 //float acceleration = 0.004; // mm / millisec / millisec - 0.002 keeps the current rig pretty calm, 0.004 starts to be wobbly
 
-
 //Sketchy Xmas Cards ran at
 //float maxSpeed = 0.300; // mm / millisec - 0.600 is good
 //float acceleration = 0.002; // mm / millisec / millisec - 0.002 keeps the current rig pretty calm, 0.004 starts to be wobbly
 
-float maxSpeed = 0.600; // mm / millisec - 0.600 is good
-float acceleration = 0.004; // mm / millisec / millisec - 0.002 keeps the current rig pretty calm, 0.004 starts to be wobbly
+// for Giant Sketchy
+float maxSpeed = 0.130; // mm / millisec - 0.600 is good
+float acceleration = 0.001; // mm / millisec / millisec - 0.002 keeps the current rig pretty calm, 0.004 starts to be wobbly
 
 float minSpeed = 0.001;
-float currSpeed= 0;
-
+float currSpeed = 0;
 
 float totalDistance = 0;
-int  totalSteps =0; 
-int  totalMillis  =0;
+int  totalSteps = 0; 
+int  totalMillis = 0;
 
 void setupMotion()
 {
-  currX = 0;
-  currY = 0;
-  currZ = 0;
+  currX = 0.0;
+  currY = 0.0;
+  currZ = -160.0; // Approximate home position of effector, relative to dawing plane
   currT = millis();
   currSpeed = 0;
 
@@ -55,33 +52,35 @@ void setupMotion()
 boolean loopMotion() // move one increment towards targetXYZ at constant speed
 {
   float dx,dy,dz, dt, scale, distance, now;
-  
-   
-   if( ! motionWorking )
+     
+  if( ! motionWorking )
     return false;
-  
-   
+     
   dx = targetX - currX;
   dy = targetY - currY;
   //dz = targetZ - currZ + calOffset( currX, currY );
   dz = targetZ - currZ;
   
   distance = sqrt( (dx*dx) + (dy*dy) + (dz*dz));
-  
+
+  // Serial.print("loopMotion: distance to go = ");
+  // Serial.println(distance);  
  
   if( distance < 1 ) // arrived
   {
-   motionWorking = false; 
- 
+    motionWorking = false; 
     return false;
   }
-
  
-  now = millis();
-  
+  now = millis();  
   dt =  now - currT;
   
-  if( stopAtEnd && inBrakingZone(distance))
+  // Serial.print("Now: ");
+  // Serial.print(millis());
+  // Serial.print(", dt: ");
+  // Serial.println(dt);
+  
+  if (stopAtEnd && inBrakingZone(distance))
   {
     currSpeed -= acceleration * dt;
     if( currSpeed < minSpeed )
@@ -104,18 +103,15 @@ boolean loopMotion() // move one increment towards targetXYZ at constant speed
   currX += dx;
   currY += dy;
   currZ += dz;
-   
-
-    
+      
   currT = now;
-  
-  
+    
   totalDistance +=  sqrt( dx*dx + dy*dy + dz*dz);
   totalSteps ++; 
   totalMillis += dt;
   
-  #ifdef DO_LOGGING
-  /*
+#ifdef DO_LOGGING
+/*
     Serial.print ("goTo ");
     Serial.print (currX);
     Serial.print (", ");
@@ -126,13 +122,12 @@ boolean loopMotion() // move one increment towards targetXYZ at constant speed
     Serial.print (currZ);
     
     Serial.print ("\n");
-  */  
-    #endif
+*/ 
+#endif
   
   if( ! goTo( currX, currY, currZ ))
   {
-      #ifdef DO_LOGGING
-  
+#ifdef DO_LOGGING  
     Serial.print ("Failed goTo: ");
     Serial.print (currX);
     Serial.print (", ");
@@ -142,9 +137,9 @@ boolean loopMotion() // move one increment towards targetXYZ at constant speed
 
     Serial.print (currZ);
     
-    Serial.print ("\n");
-    
-    #endif
+    Serial.print ("\n");    
+#endif
+
     // if we couldn't go there, keep track of where we really are to stop the motion control going mad
       currX -= dx;
       currY -= dy;
@@ -153,10 +148,8 @@ boolean loopMotion() // move one increment towards targetXYZ at constant speed
       motionWorking = false; 
  
       return false;
-
   }
-  
-  
+    
   return true;
 }
 

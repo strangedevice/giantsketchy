@@ -19,10 +19,15 @@ const float side_from_radius = 2.0 / tan30; // we want the sides of the base and
                                             // but what we can easily measure is the distance from the center to the midpoint of the side
                                             // so multiply that by 2/tan(30)
                                             
-const float e = side_from_radius * 25.0;    // end effector
-const float f = side_from_radius * 48;      // base
-const float re = 220.0;                     // effector arm length
-const float rf = 37.0;                      // base arm length
+// const float e = side_from_radius * 25.0;    // end effector
+// const float f = side_from_radius * 48;      // base
+// const float re = 220.0;                     // effector arm length
+// const float rf = 37.0;                      // base arm length
+
+const float e = side_from_radius * 40.0;    // end effector
+const float f = side_from_radius * 90.0;    // base
+const float re = 475.0;                     // effector arm length
+const float rf = 150.0;                     // base arm length
  
  // for other dimensional setup, see the top of giantsketchy.ino
  
@@ -103,7 +108,7 @@ int goTo( float x0, float y0, float z0 )
     
   static float tLast = 0;
        
-  if( 0 != delta_calcInverse( x0,  y0,  z0 + baseZ, theta1, theta2, theta3))
+  if(0 != delta_calcInverse(x0, y0, z0 + baseZ, theta1, theta2, theta3))
   {  
 #ifdef DO_LOGGING
     Serial.print ("Unreachable pos: ");
@@ -119,9 +124,8 @@ int goTo( float x0, float y0, float z0 )
     return 0; // no pos
   }
   
-  digitalWrite(STATUS_LED, false);
-  
 #ifdef DO_LOGGING
+/*
   Serial.print ("Pos: ");
   Serial.print (x0);
   Serial.print (", ");
@@ -129,8 +133,46 @@ int goTo( float x0, float y0, float z0 )
   Serial.print (", ");
   Serial.print (z0);
   Serial.print ("\n");
+  Serial.print ("Raw angles: ");
+  Serial.print (theta1);
+  Serial.print (", ");
+  Serial.print (theta2);
+  Serial.print (", ");
+  Serial.print (theta3);
+  Serial.print ("\n");
+*/
 #endif
 
+  if (!transformToServoAngle(theta1) ||
+      !transformToServoAngle(theta2) ||
+      !transformToServoAngle(theta3))
+  {
+#ifdef DO_LOGGING
+    Serial.print ("Unreachable angles: ");
+    Serial.print (theta1);
+    Serial.print (", ");
+    Serial.print (theta2);
+    Serial.print (", ");
+    Serial.print (theta3);
+    Serial.print ("\n");
+#endif
+
+    digitalWrite(STATUS_LED, true);
+    return 0;    
+  }
+
+#ifdef DO_LOGGING  
+  Serial.print ("Angles: ");
+  Serial.print (theta1);
+  Serial.print (", ");
+  Serial.print (theta2);
+  Serial.print (", ");
+  Serial.print (theta3);
+  Serial.print ("\n");
+#endif
+  
+  digitalWrite(STATUS_LED, false);
+  
   float tNow = millis();
  
   setServoSpeedAndPosition(&s0, tLast, tNow, theta1, last_theta1);
@@ -161,13 +203,13 @@ void setServoSpeedAndPosition(StepperWrapper *stepper, float t1, float t2, float
   num_servo_speed += 1.0;
 }
 
-boolean transformToServoAngle( float &theta )
+boolean transformToServoAngle(float &theta)
 {
   // Giant Sketchy's arms go from 0 (max retract) to about 140 (full extend, arm in line with servo body)  
   // Theta from the geometry maths has 0 with the arm horizontal, -90 at full extend
   
   theta = -theta;
-  theta = theta + 50; // Giant Skethcy's arms are horizontal at 50 degrees
+  theta = theta + 50; // Giant Sketchy's arms are horizontal at 50 degrees
   
   boolean success = true;
   
