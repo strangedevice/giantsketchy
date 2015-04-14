@@ -138,7 +138,15 @@ void loop()
    }
    
    loopPosition(); // always let the steppers update
-   loopPath();
+   
+   if (state == STATE_RUN) {
+     boolean done = !loopPath();
+     
+     if (done) {
+       state = STATE_IDLE;
+       homePosition();
+     }
+   };  
 }
 
 void startHoming()
