@@ -21,23 +21,21 @@ boolean addPoint( int x, int y, int z, int overhead = 2 );
 
 void setup() 
 {   
-  Serial.begin (9600); // for debugging
+  Serial.begin(9600); // for debugging
   
 #ifdef DO_LOGGING
   Serial.print ("setup\n");
 #endif
 
-  setupControls();
+  //setupControls();
   //setupRangeSensor();
+  
   setupPosition();
   setupMotion();
   setupTimerISR();
   
   setupBluetooth();
   
-  //buildPath();
-
-  //r startReadingBluetooth();
   startHoming();
 }
 
@@ -54,99 +52,46 @@ boolean wasOff = false;
 int state = STATE_RUN;
 
 void loop() 
-{ 
-     
-  if( state == STATE_HOME )
+{      
+  if (state == STATE_HOME)
   {
     if( !anyHoming())
       startReadingBluetooth();
   }
-  
-  if( /* readHouseSwitch() && */ state == STATE_READING_BLUETOOTH )
- {
+
+/*
+  // Draw demo sketch
+  if(state == STATE_READING_BLUETOOTH )
+  {
     clearPath();
     buildDemoPath();
     startRun();
- }
-
-/* 
-  if( readHomeSwitch() && state != STATE_HOME)
-  {
-    state = STATE_HOME;
-    #ifdef DO_LOGGING
-    Serial.println ("STATE_HOME");
-    #endif
-    turnOnServos();
-    stopPath();
-
   }
-  
-  if( readServoOffSwitch() && state != STATE_SERVO_OFF)
-  {
-    state = STATE_SERVO_OFF;
-    #ifdef DO_LOGGING
-    Serial.println ("STATE_SERVO_OFF");
-    #endif
-    turnOffServos();
-    stopPath();
-    wasOff = true;
-  }
-
-  
-  if( (state ==  STATE_HOME || state == STATE_SERVO_OFF) && 
-        ! readHomeSwitch() && ! readServoOffSwitch())
-  {
-    // calibrate when eiher mode is switched off, just to test calibrate and prove we are alive
-    clearPath();
-    if( numPoints > 0 )
-        startRun();
-     else
-        startReadingBluetooth();
-  }
-  
-
-
-  
-  if( state == STATE_RUN )
-  {
-   boolean done = ! loopPath();
-   
-   if( done )
-   {
-     clearPath();
-     startReadingBluetooth();
-   }
-  }  
-   
-  if( state == STATE_READING_BLUETOOTH )
-  {
-   loopBluetooth();
-  }
-  
 */
 
-   if( state != STATE_IDLE && state != STATE_READING_BLUETOOTH)
-   {
+  if( state == STATE_READING_BLUETOOTH )
+  {
+    loopBluetooth();
      
-     if( state == STATE_CALIBRATE)
-     {
-       //loopRangeSensor(); 
-       //loopCalibrate();
-     }
-     
-     loopMotion();
-   }
+    if (isDoneBluetooth()) {
+      startRun();
+    }
+  }
+  
+  if (state != STATE_IDLE && state != STATE_READING_BLUETOOTH)
+  { 
+    loopMotion();
+  }
    
-   loopPosition(); // always let the steppers update
+  loopPosition(); // always let the steppers update
    
-   if (state == STATE_RUN) {
-     boolean done = !loopPath();
+  if (state == STATE_RUN) {
+    boolean done = !loopPath();
      
-     if (done) {
-       state = STATE_IDLE;
-       homePosition();
-     }
-   };  
+    if (done) {
+      startHoming();
+    }
+  }  
 }
 
 void startHoming()
@@ -169,21 +114,20 @@ void startReadingBluetooth()
   #endif
   
   turnOffServos();
+  clearPath();
   turnOnBluetooth();
 }
 
-
 void startRun()
 {
-  #ifdef DO_LOGGING
-   Serial.println ("STATE_RUN");
-  #endif
+#ifdef DO_LOGGING
+  Serial.println ("STATE_RUN");
+#endif
      
-    state = STATE_RUN;
+  state = STATE_RUN;
   turnOnServos();
-    startPath();
+  startPath();
 }
-
 
 void buildDemoPath()
 {

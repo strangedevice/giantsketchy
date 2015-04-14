@@ -7,13 +7,11 @@ struct point
 {
   byte x,y,z;
 };
+
 #define MAX_POINTS 256
-struct point points[ MAX_POINTS ];
+struct point points[MAX_POINTS];
 
 int nextPoint = -1;
-
-
-
 
 boolean loopPath()
 {
@@ -48,26 +46,21 @@ boolean loopPath()
   logPoint();
   
   boolean stopAtEnd = true;
-  if( nextPoint+1 < numPoints )
+  
+  if (nextPoint+1 < numPoints)
   {
-    if( points[nextPoint].z == points[nextPoint+1].z )
+    if points[nextPoint].z == points[nextPoint+1].z)
       stopAtEnd = false;
   }
- 
-  
-  moveTo( points[nextPoint].x - 128, points[nextPoint].y - 128, points[nextPoint].z - 128, stopAtEnd);
+   
+  moveTo(points[nextPoint].x - 128, points[nextPoint].y - 128, points[nextPoint].z - 128, stopAtEnd);
   
   pathWorking = true;
-  return true;
-    
-  
+  return true;  
 }
-
-
 
 void stopPath()
 {
-
   nextPoint = numPoints;
   pathWorking = false; 
 }
@@ -79,32 +72,31 @@ void clearPath()
 
 void startPath()
 {
-    #ifdef DO_LOGGING
-   Serial.println ("startPath");
-     Serial.println (numPoints);
- 
-  #endif
-   nextPoint = 0;
-    pathWorking = true; 
+#ifdef DO_LOGGING
+  Serial.println ("startPath");
+  Serial.println (numPoints);
+#endif
+   
+  nextPoint = 0;
+  pathWorking = true; 
 }
 
-boolean addPoint( int x, int y, int z, int overhead )  // in range -127-127
+boolean addPoint(int x, int y, int z, int overhead)  // in range -127, +127
 {
-  if( numPoints + overhead + 1 >= MAX_POINTS )
+  if (numPoints + overhead + 1 >= MAX_POINTS)
     return false;
-    
+       
+   points[numPoints].x = x + 128;
+   points[numPoints].y = y + 128;
+   points[numPoints].z = z + 128;
    
-   points[numPoints].x = x+128;
-   points[numPoints].y = y+128;
-   points[numPoints].z = z+128;
-   
-   numPoints ++;
+   ++numPoints;   
    return true;
 }
 
 void logPoint()
 {
-    #ifdef DO_LOGGING
+#ifdef DO_LOGGING
     Serial.print ("Point ");
     Serial.print (nextPoint);
     Serial.print (": ");
@@ -114,12 +106,12 @@ void logPoint()
     Serial.print (", ");
     Serial.print (points[nextPoint].z-128);
     Serial.print ("\n");
-     #endif
+#endif
 }
 
 void logSummary()
 {
-      #ifdef DO_LOGGING
+#ifdef DO_LOGGING
     Serial.print ("numPoints: ");
     Serial.print (numPoints);
     Serial.print (", totalDistance: ");
@@ -144,9 +136,7 @@ void logSummary()
     Serial.print ("mean servo speed: ");
     Serial.print ( 60.0 / ((sum_servo_speed/num_servo_speed) * 1000));
     Serial.print (" secs/60 deg");
-    Serial.print ("\n");
-    
-    
-     #endif
+    Serial.print ("\n");    
+#endif
 }
 
