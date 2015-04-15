@@ -34,7 +34,14 @@ const float rf = 150.0;                     // base arm length
 // limits of servo motion for our rig
 const int minServoPos = 0;
 const int maxServoPos = 100;
+
 // see transformToServoAngle for a description of how we use angles
+#define HORIZONTAL_ANGLE 52.0
+
+// Retain previous position so deltas can be calculated.
+static float last_theta1 = 0.0;
+static float last_theta2 = 0.0;
+static float last_theta3 = 0.0;
 
 #define STATUS_LED 13 // lights up for bad positions
 
@@ -68,9 +75,31 @@ boolean anyHoming()
 
 void homePosition()
 {
-   s0.home();
-   s1.home();
-   s2.home();
+  s0.home();
+  s1.home();
+  s2.home();
+   
+  // Servo angle is zero at home position
+  last_theta1 = 0.0;
+  last_theta2 = 0.0;
+  last_theta3 = 0.0;
+}
+
+float getHomeZ() {
+/*
+  float x0, y0, z0;
+  int status = delta_calcForward(HORIZONTAL_ANGLE, HORIZONTAL_ANGLE, HORIZONTAL_ANGLE, x0, y0, z0);
+  
+  if (status == 0) {
+#ifdef DO_LOGGING
+      Serial.print("Calculated home z: ");
+      Serial.println(z0);
+#endif
+     return z0;
+  }
+*/
+
+  return 345.0;
 }
 
 void turnOnServos()
@@ -101,11 +130,7 @@ int goTo( float x0, float y0, float z0 )
   float theta1;
   float theta2;
   float theta3;
-   
-  static float last_theta1;
-  static float last_theta2;
-  static float last_theta3;
-    
+      
   static float tLast = 0;
        
   if(0 != delta_calcInverse(x0, y0, z0 + baseZ, theta1, theta2, theta3))
@@ -116,7 +141,7 @@ int goTo( float x0, float y0, float z0 )
     Serial.print (", ");
     Serial.print (y0);
     Serial.print (", ");
-    Serial.print (z0);
+    Serial.print (z0 + baseZ);
     Serial.print ("\n");
 #endif
      
@@ -209,7 +234,7 @@ boolean transformToServoAngle(float &theta)
   // Theta from the geometry maths has 0 with the arm horizontal, -90 at full extend
   
   theta = -theta;
-  theta = theta + 50; // Giant Sketchy's arms are horizontal at 50 degrees
+  theta = theta + HORIZONTAL_ANGLE; // Giant Sketchy's arms are horizontal at about 50 degrees
   
   boolean success = true;
   
@@ -228,10 +253,9 @@ boolean transformToServoAngle(float &theta)
   return success;
 }
 
-/* Assuming we don't need this...
- // forward kinematics: (theta1, theta2, theta3) -> (x0, y0, z0)
- // returned status: 0=OK, -1=non-existing position
- int delta_calcForward(float theta1, float theta2, float theta3, float &x0, float &y0, float &z0) {
+// forward kinematics: (theta1, theta2, theta3) -> (x0, y0, z0)
+// returned status: 0=OK, -1=non-existing position
+int delta_calcForward(float theta1, float theta2, float theta3, float &x0, float &y0, float &z0) {
      float t = (f-e)*tan30/2;
      float dtr = pi/(float)180.0;
  
@@ -276,9 +300,9 @@ boolean transformToServoAngle(float &theta)
      z0 = -(float)0.5*(b+sqrt(d))/a;
      x0 = (a1*z0 + b1)/dnm;
      y0 = (a2*z0 + b2)/dnm;
+     
      return 0;
- }
-*/
+}
 
 // inverse kinematics
 // helper functions, calculates angle theta1 (for YZ-pane)

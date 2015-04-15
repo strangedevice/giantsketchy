@@ -44,7 +44,7 @@ void setupMotion()
 void homeMotion() {
   currX = 0.0;
   currY = 0.0;
-  currZ = -160.0; // Approximate home position of effector, relative to dawing plane
+  currZ = getHomeZ() - baseZ; // Approximate home position of effector, relative to dawing plane
   currSpeed = 0;
   
   targetX = currX;

@@ -13,7 +13,8 @@ struct point points[MAX_POINTS];
 
 // Scale the entire drawing by a fixed amount
 #define SCALE_FACTOR 1.2
-#define SCALE(p) (SCALE_FACTOR * (float)(p))
+// #define SCALE(p) (SCALE_FACTOR * (float)(p))
+#define SCALE(p) (p)
 
 int nextPoint = -1;
 
