@@ -32,8 +32,7 @@ void setup()
   
   setupPosition();
   setupMotion();
-  setupTimerISR();
-  
+  setupTimerISR();  
   setupBluetooth();
   
   startHoming();
@@ -55,7 +54,8 @@ void loop()
 {      
   if (state == STATE_HOME)
   {
-    if( !anyHoming())
+    if (!anyHoming())
+      homeMotion();
       startReadingBluetooth();
   }
 
@@ -74,6 +74,7 @@ void loop()
     loopBluetooth();
      
     if (isDoneBluetooth()) {
+      turnOffBluetooth();
       startRun();
     }
   }
@@ -115,6 +116,7 @@ void startReadingBluetooth()
   
   turnOffServos();
   clearPath();
+  addPoint(0, 0, -10);
   turnOnBluetooth();
 }
 

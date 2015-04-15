@@ -36,17 +36,20 @@ int  totalMillis = 0;
 
 void setupMotion()
 {
+  currT = millis();
+  homeMotion(); 
+  motionWorking = false;
+}
+
+void homeMotion() {
   currX = 0.0;
   currY = 0.0;
   currZ = -160.0; // Approximate home position of effector, relative to dawing plane
-  currT = millis();
   currSpeed = 0;
-
-  targetX = 0;
-  targetY = 0;
-  targetZ = -10;
- 
-  motionWorking = false;
+  
+  targetX = currX;
+  targetY = currY;
+  targetZ = currZ;
 }
 
 boolean loopMotion() // move one increment towards targetXYZ at constant speed
@@ -164,7 +167,7 @@ boolean inBrakingZone( float distance )
   return distance < s;
 }
 
-void moveTo( float x0, float y0, float z0, boolean s)
+void moveTo(float x0, float y0, float z0, boolean s)
 {
   #ifdef DO_LOGGING
   /*

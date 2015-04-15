@@ -11,6 +11,10 @@ struct point
 #define MAX_POINTS 256
 struct point points[MAX_POINTS];
 
+// Scale the entire drawing by a fixed amount
+#define SCALE_FACTOR 1.2
+#define SCALE(p) (SCALE_FACTOR * (float)(p))
+
 int nextPoint = -1;
 
 boolean loopPath()
@@ -49,11 +53,11 @@ boolean loopPath()
   
   if (nextPoint+1 < numPoints)
   {
-    if points[nextPoint].z == points[nextPoint+1].z)
+    if (points[nextPoint].z == points[nextPoint+1].z)
       stopAtEnd = false;
   }
    
-  moveTo(points[nextPoint].x - 128, points[nextPoint].y - 128, points[nextPoint].z - 128, stopAtEnd);
+  moveTo(SCALE(points[nextPoint].x - 128), SCALE(points[nextPoint].y - 128), points[nextPoint].z - 128, stopAtEnd);
   
   pathWorking = true;
   return true;  
