@@ -5,7 +5,7 @@
 
 // For other dimensional setup, see the top of position.ino
 // float baseZ = 220; // neutral plane for our drawing - we get about +-70mm in x and y on the 220 plane
-float baseZ = 530; // neutral plane for our drawing - Giant Sketchy
+float baseZ = 520; // neutral plane for our drawing - Giant Sketchy
 
 int numPoints = 0;
 boolean pathWorking = true;

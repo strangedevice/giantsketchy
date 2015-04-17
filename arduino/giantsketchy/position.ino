@@ -31,9 +31,9 @@ const float rf = 150.0;                     // base arm length
  
  // for other dimensional setup, see the top of giantsketchy.ino
  
-// limits of servo motion for our rig
+// limits of servo motion for our rig (see also SAFE_LIMIT in robot.h)
 const int minServoPos = 0;
-const int maxServoPos = 100;
+const int maxServoPos = 135;
 
 // see transformToServoAngle for a description of how we use angles
 #define HORIZONTAL_ANGLE 52.0

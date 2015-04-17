@@ -8,7 +8,7 @@
 
 #define STEPS_PER_REV (MOTOR_STEPS * MICROSTEPS * CYCLOID_RATIO)
 
-#define SAFE_LIMIT (STEPS_PER_REV / 4)
+#define SAFE_LIMIT (3 * STEPS_PER_REV / 8)
 
 void enableX();
 void enableY();
