@@ -8,12 +8,12 @@ struct point
   byte x,y,z;
 };
 
-#define MAX_POINTS 256
+#define MAX_POINTS 2048
 struct point points[MAX_POINTS];
 
 // Scale the entire drawing by a fixed amount
-#define SCALE_FACTOR 1.2
-// #define SCALE(p) (SCALE_FACTOR * (float)(p))
+#define SCALE_FACTOR 1.25
+//#define SCALE(p) (SCALE_FACTOR * (float)(p))
 #define SCALE(p) (p)
 
 int nextPoint = -1;

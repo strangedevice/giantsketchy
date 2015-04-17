@@ -2,10 +2,11 @@
 #include "StepperWrapper.h"
  
 #define DO_LOGGING
+#undef DRAW_DEMO
 
 // For other dimensional setup, see the top of position.ino
 // float baseZ = 220; // neutral plane for our drawing - we get about +-70mm in x and y on the 220 plane
-float baseZ = 520; // neutral plane for our drawing - Giant Sketchy
+float baseZ = 525; // neutral plane for our drawing - Giant Sketchy
 
 int numPoints = 0;
 boolean pathWorking = true;
@@ -67,6 +68,7 @@ void loop()
     }
   }
 
+#ifdef DRAW_DEMO
   // Draw demo sketch
   if(state == STATE_READING_BLUETOOTH )
   {
@@ -74,8 +76,7 @@ void loop()
     buildDemoPath();
     startRun();
   }
-
-/*
+#else
   if( state == STATE_READING_BLUETOOTH )
   {
     loopBluetooth();
@@ -85,7 +86,7 @@ void loop()
       startRun();
     }
   }
-*/
+#endif
 
   if (state != STATE_IDLE && state != STATE_READING_BLUETOOTH)
   { 
@@ -98,8 +99,11 @@ void loop()
     boolean done = !loopPath();
      
     if (done) {
-      // startHoming();
+#ifdef DRAW_DEMO
       idle(); // for demo
+#else
+      startHoming();
+#endif
     }
   }  
 }

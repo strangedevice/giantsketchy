@@ -2,11 +2,12 @@
 boolean bluetoothOn = false;
 
 #define BT_STATUS_WAITING 0
-#define BT_STATUS_READING 1
-#define BT_STATUS_DONE 2
+#define BT_STATUS_NUMPOINTS 1
+#define BT_STATUS_READING 2
+#define BT_STATUS_DONE 3
 
 int btStatus = BT_STATUS_WAITING;
-int numPointsComing = 0;
+unsigned int numPointsComing = 0;
 int axis = 0;
 int axes[3];
 long startT = 0;
@@ -76,10 +77,25 @@ void loopBluetooth()
     switch( btStatus )
     {
       case BT_STATUS_WAITING:
-        numPointsComing = c; // first byte tells us num points
-        clearPath();
-        btStatus = BT_STATUS_READING;
+        numPointsComing = c & 0xFF; // least significant byte of num points
+#ifdef DO_LOGGING
+        Serial.print("LS Byte: ");
+        Serial.print((byte)c); 
+#endif
+        // clearPath();
+        btStatus = BT_STATUS_NUMPOINTS;
         startT = millis();           
+        break;
+        
+      case BT_STATUS_NUMPOINTS:
+        numPointsComing |= (c << 8); // most significant byte of num points
+#ifdef DO_LOGGING
+        Serial.print(", MS Byte: ");
+        Serial.println((byte)c);
+        Serial.print("Expected number of points: ");
+        Serial.println(numPointsComing);   
+#endif
+        btStatus = BT_STATUS_READING;
         break;
          
         case BT_STATUS_READING:
@@ -108,15 +124,14 @@ void loopBluetooth()
           break;         
      }
   }
-  
-  /*
+
+/* 
    #ifdef DO_LOGGING
-    Serial.print ("numPointsComing ");
-    
+    Serial.print ("numPointsComing ");  
     Serial.print (numPointsComing);
     Serial.print ("\n");
      #endif
-  */
+*/
 }
 
 boolean isDoneBluetooth() {
